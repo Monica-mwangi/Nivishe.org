@@ -12,7 +12,8 @@ import Footer from './components/Footer';
 import HHJProgram from './pages/programs/hhj';
 import BintiWellnessProgram from './pages/programs/binti';
 import ChildAndAdolescentWellbeing from './pages/programs/child-wellbeing';
-import NivisheInstitute from './pages/programs/NivisheInstitute';
+import NivisheInstitute from './pages/programs/nivisheinstitute';
+
 import VolunteerPage from './pages/volunteer';
 import PartnershipPage from './pages/partner';
 // import ImpactPage from './pages/impact';
