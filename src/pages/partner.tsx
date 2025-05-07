@@ -1,6 +1,8 @@
+import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
+import { partners } from '../data/content';
 
 const PartnershipPage: React.FC = () => {
   const [showApplicationForm, setShowApplicationForm] = useState(false);
@@ -42,10 +44,7 @@ const PartnershipPage: React.FC = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -53,9 +52,8 @@ const PartnershipPage: React.FC = () => {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Partnership application submitted:', formData);
+      console.log('Form submitted:', formData);
       setSubmitSuccess(true);
     } catch (error) {
       console.error('Submission error:', error);
@@ -84,7 +82,7 @@ const PartnershipPage: React.FC = () => {
 
   return (
     <div className="pt-16">
-      {/* Hero Section with Cover Image */}
+      {/* Hero Section */}
       <Section
         title="Strategic Partnerships"
         subtitle="Join forces with us to amplify mental health impact across Africa"
@@ -96,24 +94,16 @@ const PartnershipPage: React.FC = () => {
           <p className="text-xl md:text-2xl mb-8">
             Together we can create sustainable solutions for mental health challenges in our communities
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button 
-              onClick={() => setShowApplicationForm(true)}
-              className="px-8 py-3 text-lg bg-orange-600 hover:bg-orange-700"
-            >
-              Apply for Partnership
-            </Button>
-            {/* <Button 
-              variant="outline"
-              className="px-8 py-3 text-lg border-white text-white hover:bg-white hover:text-black"
-            >
-              Learn About Benefits
-            </Button> */}
-          </div>
+          <Button 
+            onClick={() => setShowApplicationForm(true)}
+            className="px-8 py-3 text-lg bg-orange-600 hover:bg-orange-700"
+          >
+            Apply for Partnership
+          </Button>
         </div>
       </Section>
 
-      {/* Partnership Benefits */}
+      {/* Benefits Section */}
       <Section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Why Partner With Us?</h2>
@@ -126,9 +116,10 @@ const PartnershipPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Amplify Your Impact</h3>
               <p className="text-gray-600">
-                Leverage our established network and expertise to maximize the reach of your CSR initiatives.
+                Leverage our established network and expertise to maximize the reach of your initiatives.
               </p>
             </div>
+
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-purple-600 mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -137,9 +128,10 @@ const PartnershipPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Strategic Collaboration</h3>
               <p className="text-gray-600">
-                Co-create programs that align with your organizational goals and our mental health mission.
+                Co-create programs that align with your organizational goals and our mission.
               </p>
             </div>
+
             <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
               <div className="text-green-600 mb-4">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -148,28 +140,49 @@ const PartnershipPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">Measurable Outcomes</h3>
               <p className="text-gray-600">
-                Receive comprehensive reporting on the impact of your partnership investment.
+                Receive comprehensive reporting on the impact of your partnership.
               </p>
             </div>
           </div>
         </div>
       </Section>
 
-      {/* Current Partners Showcase */}
+      {/* Partners Showcase */}
       <Section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Valued Partners</h2>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            {[1, 2, 3, 4, 5].map((i) => (
-              <div key={i} className="h-24 w-48 bg-gray-100 flex items-center justify-center rounded-lg">
-                <span className="text-gray-400">Partner Logo {i}</span>
-              </div>
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Our Valued Partners</h3>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Collaborating with leading organizations to drive mental health innovation
+            </p>
+            <div className="w-24 h-1 bg-orange-400 mx-auto mt-6"></div>
+          </div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 px-4">
+            {partners.map(partner => (
+              <motion.div
+                key={partner.id}
+                className="flex flex-col items-center"
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="h-32 w-full flex items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                  <img 
+                    src={partner.logo} 
+                    // alt={partner.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
+                </div>
+                <p className="mt-3 text-sm font-medium text-gray-700 text-center">
+                  {/* {partner.name} */}
+                </p>
+              </motion.div>
             ))}
           </div>
         </div>
       </Section>
 
-      {/* Partnership Form Modal */}
+      {/* Application Form Modal */}
       {showApplicationForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto relative">
@@ -189,7 +202,7 @@ const PartnershipPage: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <h4 className="text-2xl font-bold mb-2">Application Received!</h4>
-                  <p className="mb-6 text-lg">Thank you for your partnership interest. Our team will review your application and contact you within 5 business days.</p>
+                  <p className="mb-6 text-lg">Thank you for your partnership interest. Our team will contact you within 5 business days.</p>
                   <Button onClick={resetForm} className="px-8 py-3">
                     Close
                   </Button>
@@ -310,7 +323,7 @@ const PartnershipPage: React.FC = () => {
                         required
                         rows={3}
                         className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="What resources (financial, expertise, networks, etc.) can you bring to this partnership?"
+                        placeholder="What resources can you bring to this partnership?"
                       />
                     </div>
 
@@ -354,7 +367,7 @@ const PartnershipPage: React.FC = () => {
                         disabled={isSubmitting}
                         className="px-6 py-2 bg-blue-600 hover:bg-blue-700"
                       >
-                        {isSubmitting ? 'Submitting...' : 'Submit Partnership Request'}
+                        {isSubmitting ? 'Submitting...' : 'Submit Application'}
                       </Button>
                     </div>
                   </form>
