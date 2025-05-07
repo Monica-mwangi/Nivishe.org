@@ -77,191 +77,119 @@ const FellowshipsPage: React.FC = () => {
   };
 
   return (
-    <div style={{ paddingTop: '64px' }}>
+    <div className="pt-16">
       {/* Application Form Modal */}
       {showApplicationForm && (
-        <div style={{
-          position: 'fixed',
-          inset: 0,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          padding: '1rem',
-          zIndex: 50
-        }}>
-          <div style={{
-            backgroundColor: 'white',
-            borderRadius: '0.5rem',
-            maxWidth: '42rem',
-            width: '100%',
-            maxHeight: '90vh',
-            overflowY: 'auto',
-            position: 'relative'
-          }}>
-            {/* Close button at top left */}
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+            {/* Close button */}
             <button 
               onClick={resetForm}
-              style={{
-                position: 'absolute',
-                top: '1rem',
-                left: '1rem',
-                color: '#6b7280',
-                zIndex: 10
-              }}
+              className="absolute top-4 left-4 text-gray-500 z-10"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" style={{ height: '1.5rem', width: '1.5rem' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 
-            <div style={{ padding: '1.5rem', paddingTop: '3rem' }}>
+            <div className="p-6 pt-12">
               {submitSuccess ? (
-                <div style={{ textAlign: 'center', padding: '2rem 0' }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" style={{ height: '4rem', width: '4rem', color: '#10B981', margin: '0 auto 1rem' }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="text-center py-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-green-500 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Application Submitted!</h4>
-                  <p style={{ marginBottom: '1.5rem' }}>Thank you for applying to the Nivishe Fellowship. We'll review your application and get back to you soon.</p>
+                  <h4 className="text-xl font-bold mb-2">Application Submitted!</h4>
+                  <p className="mb-6">Thank you for applying to the Nivishe Fellowship. We'll review your application and get back to you soon.</p>
                   <Button onClick={resetForm}>Close</Button>
                 </div>
               ) : (
                 <>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign: 'center' }}>Cohort 5 Application</h3>
+                  <h3 className="text-2xl font-bold mb-6 text-center">Cohort 6 Application</h3>
                   <form onSubmit={handleSubmit}>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div>
-                        <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 500, color: '#374151', marginBottom: '0.25rem' }}>Full Name*</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Full Name*</label>
                         <input
                           type="text"
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
                           required
-                          style={{
-                            width: '100%',
-                            padding: '0.5rem 1rem',
-                            border: '1px solid #e5e7eb',
-                            borderRadius: '0.5rem',
-                            outline: 'none',
-                            boxShadow: '0 0 0 2px rgba(0, 0, 0, 1)'
-                          }}
+                          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                         />
                       </div>
                       <div>
-                        <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 500, color: '#374151', marginBottom: '0.25rem' }}>Email*</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Email*</label>
                         <input
                           type="email"
                           name="email"
                           value={formData.email}
                           onChange={handleInputChange}
                           required
-                          style={{
-                            width: '100%',
-                            padding: '0.5rem 1rem',
-                            border: '1px solid #e5e7eb',
-                            borderRadius: '0.5rem',
-                            outline: 'none',
-                            boxShadow: '0 0 0 2px rgba(0, 0, 0, 1)'
-                          }}
+                          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                         />
                       </div>
                       <div>
-                        <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 500, color: '#374151', marginBottom: '0.25rem' }}>Phone Number*</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number*</label>
                         <input
                           type="tel"
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
                           required
-                          style={{
-                            width: '100%',
-                            padding: '0.5rem 1rem',
-                            border: '1px solid #e5e7eb',
-                            borderRadius: '0.5rem',
-                            outline: 'none',
-                            boxShadow: '0 0 0 2px rgba(0, 0, 0, 1)'
-                          }}
+                          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                         />
                       </div>
                       <div>
-                        <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 500, color: '#374151', marginBottom: '0.25rem' }}>Country*</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">Country*</label>
                         <input
                           type="text"
                           name="country"
                           value={formData.country}
                           onChange={handleInputChange}
                           required
-                          style={{
-                            width: '100%',
-                            padding: '0.5rem 1rem',
-                            border: '1px solid #e5e7eb',
-                            borderRadius: '0.5rem',
-                            outline: 'none',
-                            boxShadow: '0 0 0 2px rgba(0, 0, 0, 1)'
-                          }}
+                          className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                         />
                       </div>
                     </div>
 
-                    <div style={{ marginBottom: '1.5rem' }}>
-                      <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 500, color: '#374151', marginBottom: '0.25rem' }}>Education Background*</label>
+                    <div className="mb-6">
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Education Background*</label>
                       <input
                         type="text"
                         name="education"
                         value={formData.education}
                         onChange={handleInputChange}
                         required
-                        style={{
-                          width: '100%',
-                          padding: '0.5rem 1rem',
-                          border: '1px solid #e5e7eb',
-                          borderRadius: '0.5rem',
-                          outline: 'none',
-                          boxShadow: '0 0 0 2px rgba(0, 0, 0, 1)'
-                        }}
+                        className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                       />
                     </div>
 
-                    <div style={{ marginBottom: '1.5rem' }}>
-                      <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 500, color: '#374151', marginBottom: '0.25rem' }}>Relevant Experience*</label>
+                    <div className="mb-6">
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Relevant Experience*</label>
                       <textarea
                         name="experience"
                         value={formData.experience}
                         onChange={handleInputChange}
                         required
                         rows={3}
-                        style={{
-                          width: '100%',
-                          padding: '0.5rem 1rem',
-                          border: '1px solid #e5e7eb',
-                          borderRadius: '0.5rem',
-                          outline: 'none',
-                          boxShadow: '0 0 0 2px rgba(0, 0, 0, 1)'
-                        }}
+                        className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                       />
                     </div>
 
-                    <div style={{ marginBottom: '1.5rem' }}>
-                      <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: 500, color: '#374151', marginBottom: '0.25rem' }}>Motivation for Applying*</label>
+                    <div className="mb-6">
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Motivation for Applying*</label>
                       <textarea
                         name="motivation"
                         value={formData.motivation}
                         onChange={handleInputChange}
                         required
                         rows={4}
-                        style={{
-                          width: '100%',
-                          padding: '0.5rem 1rem',
-                          border: '1px solid #e5e7eb',
-                          borderRadius: '0.5rem',
-                          outline: 'none',
-                          boxShadow: '0 0 0 2px rgba(0, 0, 0, 1)'
-                        }}
+                        className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                       />
                     </div>
 
-                    <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
+                    <div className="flex justify-end gap-4">
                       <Button
                         type="button"
                         variant="outline"
@@ -292,21 +220,15 @@ const FellowshipsPage: React.FC = () => {
         className="bg-black bg-[url('/images/fellowship.jpg')] bg-cover bg-center bg-blend-overlay"
         dark
       >
-        <div style={{
-          backgroundColor: '#F97316',
-          padding: '2rem',
-          borderRadius: '0.5rem',
-          marginTop: '3rem',
-          maxWidth: '42rem',
-          marginLeft: 'auto',
-          marginRight: 'auto'
-        }}>
-          <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>Now Accepting Applications</h3>
-          <p style={{ fontSize: '1.125rem', marginBottom: '1.5rem' }}>
-            Join Cohort 5 of our transformative fellowship program and become part of a growing network of mental health leaders.
+        <div className="bg-orange-500 p-8 rounded-lg mt-12 max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold mb-4">Now Accepting Applications</h3>
+          <p className="text-lg mb-6">
+            Join Cohort 6 of our transformative fellowship program and become part of a growing network of mental health leaders.
           </p>
           <Button 
-            variant="secondary" 
+            variant="secondary"
+            size="lg"
+            className="text-white" 
             onClick={() => setShowApplicationForm(true)}
           >
             Apply Now
@@ -315,40 +237,23 @@ const FellowshipsPage: React.FC = () => {
       </Section>
 
       {/* Fellows Display Section */}
-      <Section title="Our Fellowship Graduates" subtitle="Meet the mental health leaders from previous cohorts">
-        <div style={{ maxWidth: '72rem', marginLeft: 'auto', marginRight: 'auto' }}>
+      <Section 
+        title="Our Fellowship Graduates" 
+        subtitle="Meet the mental health leaders from previous cohorts"
+        className="bg-orange-50" // Light orange background
+      >
+        <div className="max-w-6xl mx-auto">
           {/* Cohort selection tabs */}
-          <div style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            gap: '0.5rem',
-            marginBottom: '2rem'
-          }}>
-            {cohortNames.map(cohort => (
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {displayedCohorts.map(cohort => (
               <button
                 key={cohort}
                 onClick={() => setActiveCohort(activeCohort === cohort ? null : cohort)}
-                style={{
-                  padding: '0.5rem 1rem',
-                  borderRadius: '9999px',
-                  fontWeight: 500,
-                  backgroundColor: activeCohort === cohort ? '#F97316' : '#F3F4F6',
-                  color: activeCohort === cohort ? 'white' : 'black',
-                  transition: 'all 0.2s ease',
-                  cursor: 'pointer',
-                  border: 'none'
-                }}
-                onMouseOver={(e) => {
-                  if (activeCohort !== cohort) {
-                    e.currentTarget.style.backgroundColor = '#E5E7EB';
-                  }
-                }}
-                onMouseOut={(e) => {
-                  if (activeCohort !== cohort) {
-                    e.currentTarget.style.backgroundColor = '#F3F4F6';
-                  }
-                }}
+                className={`px-4 py-2 rounded-full font-medium transition-all cursor-pointer ${
+                  activeCohort === cohort 
+                    ? 'bg-orange-600 text-white' 
+                    : 'bg-orange-100 text-gray-800 hover:bg-orange-200'
+                }`}
               >
                 {cohort}
               </button>
@@ -357,44 +262,28 @@ const FellowshipsPage: React.FC = () => {
 
           {/* Display fellows for the selected cohort */}
           {activeCohort && (
-            <div style={{ marginBottom: '3rem' }}>
-              <h3 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '1.5rem', textAlign: 'center' }}>
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold mb-6 text-center">
                 {activeCohort} Fellows
               </h3>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
-                gap: '1.5rem'
-              }}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {cohorts[activeCohort].map((fellow, index) => (
-                  <div key={index} style={{
-                    backgroundColor: 'white',
-                    padding: '1.5rem',
-                    borderRadius: '0.5rem',
-                    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-                    transition: 'all 0.2s ease'
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-                    e.currentTarget.style.transform = 'translateY(-4px)';
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
+                  <div 
+                    key={index} 
+                    className="bg-white p-6 rounded-lg shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
                   >
-                    <h4 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>{fellow.name}</h4>
-                    <p style={{ color: '#4B5563', marginBottom: '0.5rem' }}>
+                    <h4 className="text-xl font-bold mb-2">{fellow.name}</h4>
+                    <p className="text-gray-600 mb-2">
                       {fellow.title || 'Mental Health Fellow'}
                     </p>
                     {fellow.country && (
-                      <p style={{ fontSize: '0.875rem', color: '#6B7280' }}>
-                        <span style={{ display: 'inline-block', width: '1rem', height: '1rem', marginRight: '0.25rem' }}>🇰🇪</span>
+                      <p className="text-sm text-gray-500">
+                        <span className="inline-block w-4 h-4 mr-1">🇰🇪</span>
                         {fellow.country}
                       </p>
                     )}
                     {fellow.bio && (
-                      <p style={{ marginTop: '0.75rem', color: '#374151' }}>{fellow.bio}</p>
+                      <p className="mt-4 text-gray-700">{fellow.bio}</p>
                     )}
                   </div>
                 ))}
@@ -404,17 +293,12 @@ const FellowshipsPage: React.FC = () => {
 
           {/* Show all cohorts button */}
           {cohortNames.length > 3 && (
-            <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+            <div className="text-center mt-8">
               <button
                 onClick={() => setShowAllCohorts(!showAllCohorts)}
-                style={{
-                  color: '#F97316',
-                  fontWeight: 500,
-                  cursor: 'pointer',
-                  border: 'none',
-                  background: 'none',
-                  textDecoration: showAllCohorts ? 'none' : 'underline'
-                }}
+                className={`font-medium text-orange-600 hover:underline ${
+                  showAllCohorts ? 'no-underline' : 'underline'
+                }`}
               >
                 {showAllCohorts ? 'Show Less' : `Show All Cohorts (${cohortNames.length})`}
               </button>

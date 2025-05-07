@@ -31,7 +31,7 @@ const FellowshipCTA: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Applications are now open for Cohort 5! Become a mental health leader in your community through our transformative fellowship program.
+            Applications are now open for Cohort 6! Become a mental health leader in your community through our transformative fellowship program.
           </motion.p>
           
           <motion.div
@@ -42,7 +42,11 @@ const FellowshipCTA: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Link to="/fellowships">
-              <Button variant="primary" size="lg">Apply Now</Button>
+              <Button variant="primary" 
+               size="lg"
+               className="text-white"
+              
+          >Apply Now</Button>
             </Link>
             {/* <Button variant="outline" size="lg" className="!border-white !text-white hover:!bg-white/10">Learn More</Button> */}
           </motion.div>

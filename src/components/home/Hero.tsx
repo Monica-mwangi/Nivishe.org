@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/images/cover.jpg" 
+          src="/images/beautiful.jpg" 
           alt="Mental health support" 
           className="object-cover w-full h-full"
         />
@@ -71,7 +71,13 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <Link to="/programs/binti">
-                        <Button variant="primary" size="lg">Our Programs</Button>
+          <Button 
+            variant="primary" 
+            size="lg"
+            className="text-white" // Add this
+          >
+            Our Programs
+          </Button>
                       </Link>
      
         </motion.div>

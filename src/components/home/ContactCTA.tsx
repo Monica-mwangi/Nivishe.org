@@ -68,7 +68,8 @@ const ContactCTA: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <Button variant="primary">Contact Us</Button>
+                <Button className="bg-black text-white">Contact Us</Button>
+
               </motion.div>
             </div>
             
@@ -80,7 +81,7 @@ const ContactCTA: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h3 className="text-2xl font-bold mb-6 text-black">Send us a message</h3>
+                <h3 className="text-2xl font-bold mb-6 text-white">Send us a message</h3>
                 
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">

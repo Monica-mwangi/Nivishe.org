@@ -69,37 +69,37 @@ export const boardMembers: TeamMember[] = [
     id: '1',
     name: 'Nadia Ahmed',
     role: 'Board Chair',
-    image: 'https://images.pexels.com/photos/762080/pexels-photo-762080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: 'images/nadia.png'
   },
   {
     id: '2',
     name: 'Prof. Joseph Onyango',
     role: 'Vice Chair',
-    image: 'https://images.pexels.com/photos/3785424/pexels-photo-3785424.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: 'images/joseph-Anyango.png'
   },
   {
     id: '3',
     name: 'Mercy Apanja',
     role: 'Board Member',
-    image: 'https://images.pexels.com/photos/5876695/pexels-photo-5876695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: 'images/mercy.png'
   },
   {
     id: '4',
     name: 'Amina Hersi',
     role: 'Board Member',
-    image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: 'images/amina-hermsi.png'
   },
   {
     id: '5',
     name: 'Diana Waithanji',
     role: 'Board Member',
-    image: 'https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: 'images/diana.png'
   },
   {
     id: '6',
     name: 'Eunice Kilonzo',
     role: 'Board Member',
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: 'images/Eunice-Kilonzo.png'
   }
 ];
 
@@ -108,37 +108,37 @@ export const staffMembers: TeamMember[] = [
     id: '1',
     name: 'Amisa Rashid',
     role: 'Founder and Executive Director',
-    image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: '/images/Amisa.jpg',
   },
   {
     id: '2',
     name: 'Mariam Yusuf',
     role: 'Operations Director',
-    image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: '/images/yusuf.jpg'
   },
   {
     id: '3',
     name: 'Nanjala Were',
     role: 'Finance Director',
-    image: 'https://images.pexels.com/photos/3778680/pexels-photo-3778680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: '/images/nanjala.jpg'
   },
   {
     id: '4',
-    name: 'Brian Odhiambo',
-    role: 'Grants and Research Lead',
-    image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    name: 'Rocette Juma',
+    role: 'Programs Assistant',
+    image: '/images/Nivishe-Staff-Rocette.jpeg'
   },
   {
     id: '5',
     name: 'Miriam Ogwel',
     role: 'Executive Assistant',
-    image: 'https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: '/images/miriam.jpg'
   },
   {
     id: '6',
     name: 'Cate Mwende',
     role: 'Programs Lead',
-    image: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    image: '/images/Nivishe-Staff-Cate.jpeg'
   }
 ];
 
@@ -146,25 +146,61 @@ export const partners: Partner[] = [
   {
     id: '1',
     name: 'Mental Health Africa',
-    logo: 'https://images.pexels.com/photos/3945674/pexels-photo-3945674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    logo: '/images/Partner-1.jpg',
     type: 'strategic'
   },
   {
     id: '2',
     name: 'Kenya Health Foundation',
-    logo: 'https://images.pexels.com/photos/3945631/pexels-photo-3945631.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    logo: '/images/Partner-2.jpg',
     type: 'funding'
   },
   {
     id: '3',
     name: 'Global Mental Wellness Initiative',
-    logo: 'https://images.pexels.com/photos/3945657/pexels-photo-3945657.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    logo: '/images/Partner-3.jpg',
     type: 'strategic'
   },
   {
-    id: '4',
+    id: '5',
     name: 'African Development Trust',
-    logo: 'https://images.pexels.com/photos/3945667/pexels-photo-3945667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    logo: '/images/Partner-4.jpg',
+    type: 'funding'
+  },
+  {
+    id: '6',
+    name: 'African Development Trust',
+    logo: '/images/Partner-5.jpg',
+    type: 'funding'
+  },
+  {
+    id: '7',
+    name: 'African Development Trust',
+    logo: '/images/Partner-6.jpg',
+    type: 'funding'
+  },
+  {
+    id: '8',
+    name: 'African Development Trust',
+    logo: '/images/IPHRD.png',
+    type: 'funding'
+  },
+  {
+    id: '9',
+    name: 'African Development Trust',
+    logo: '/images/SHOFCO.png',
+    type: 'funding'
+  },
+  {
+    id: '10',
+    name: 'African Development Trust',
+    logo: '/images/FEMNET.png',
+    type: 'funding'
+  },
+  {
+    id: '11',
+    name: 'African Development Trust',
+    logo: '/images/FEMINIST.png',
     type: 'funding'
   }
 ];
@@ -232,7 +268,7 @@ export const programs: Program[] = [
 export const newsItems: NewsItem[] = [
   {
     id: '1',
-    title: 'Nivishe Foundation Launches Cohort 5 of Mental Health Fellowship',
+    title: 'Nivishe Foundation Launches Cohort 6 of Mental Health Fellowship',
     excerpt: 'Applications are now open for the 2025 Nivishe Mental Health Fellowship, a transformative program for young leaders across Africa.',
     date: 'April 15, 2025',
     image: 'https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -268,25 +304,19 @@ export const fellows: Fellow[] = [
   {
     id: '1',
     name: 'Abdallah Omar',
-    cohort: 'Cohort 4',
-    country: 'Sudan',
-    image: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    
     testimonial: 'The Fellowship didn\'t just train me; it made me believe I could be part of the solution.'
   },
   {
     id: '2',
     name: 'Faith Wanjiku',
-    cohort: 'Cohort 3',
-    country: 'Kenya',
-    image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    
     testimonial: 'Nivishe gave me hope when I thought my life was over. Now I am helping others find their hope too.'
   },
   {
     id: '3',
     name: 'Esther Mugambi',
-    cohort: 'Cohort 4',
-    country: 'Kenya',
-    image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+   
   },
   {
     id: '4',

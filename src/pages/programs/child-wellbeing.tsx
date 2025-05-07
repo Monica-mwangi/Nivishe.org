@@ -46,6 +46,20 @@ const ChildAndAdolescentWellbeing: React.FC = () => {
                 Early, trauma-informed mental health care is critical. Without intervention, children exposed to toxic stress face increased risk of lifelong physical and mental health issues. Our program ensures they receive the nurturing support they need for a healthier, stronger future.
               </p>
             </div>
+
+                <div className="bg-white p-8 rounded-lg shadow text-center">
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">Watch Child and Adolescent well-being  in Action</h3>
+              <div className="aspect-w-16 aspect-h-9 w-full max-w-3xl mx-auto">
+              <iframe
+                    src="https://www.youtube.com/embed/l04Gae5jjIc?list=PLmioQB3tcdRpDRow07UlAqymhcK7NU-ix"
+                    title="Binti Wellness Circles Video"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-[315px] rounded-md"
+                    ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>

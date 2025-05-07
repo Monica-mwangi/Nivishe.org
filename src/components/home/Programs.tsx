@@ -25,7 +25,7 @@ const Programs: React.FC = () => {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Programs</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Pillars</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our model is designed to create sustainable, scalable impact across four strategic pillars.
           </p>
@@ -53,7 +53,13 @@ const Programs: React.FC = () => {
 
         <div className="text-center">
         <Link to="/programs/hhj">
-              <Button variant="primary" size="lg">Learn More About Our Programs</Button>
+                      <Button 
+                variant="primary" 
+                size="lg"
+                className="text-white" // Add this
+              >
+                Learn More About Our Programs
+              </Button>
             </Link>
         </div>
       </div>

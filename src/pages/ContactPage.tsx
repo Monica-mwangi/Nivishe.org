@@ -9,12 +9,13 @@ const ContactPage: React.FC = () => {
       <Section
         title="Contact Us"
         subtitle="Get in touch with us for any inquiries or support"
-        className="bg-black"
+        className="text-White"
         dark
       >
         <div className="grid md:grid-cols-2 gap-12 mt-12">
           <div className="bg-yellow-400 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold mb-6">Send us a message</h3>
+          <h3 className="text-2xl font-bold mb-6 bg-white">Send us a message</h3>
+
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
