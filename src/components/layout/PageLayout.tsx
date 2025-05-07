@@ -13,7 +13,7 @@ const PageLayout: React.FC<PageLayoutProps> = ({ coverImage, title, subtitle, ch
     <div className="w-full">
       {/* Cover Image Section */}
       <div
-        className="w-full h-[70vh] bg-cover bg-center flex items-end"
+        className="w-full h-[100vh] bg-cover bg-center flex items-end"
         style={{ backgroundImage: `url(${coverImage})` }}
       >
         <div className="w-full bg-gradient-to-t from-black to-transparent pb-16 pt-32 px-4 md:px-8">

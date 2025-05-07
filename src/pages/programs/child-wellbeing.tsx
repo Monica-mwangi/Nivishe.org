@@ -47,22 +47,24 @@ const ChildAndAdolescentWellbeing: React.FC = () => {
               </p>
             </div>
 
-                <div className="bg-white p-8 rounded-lg shadow text-center">
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Watch Child and Adolescent well-being  in Action</h3>
-              <div className="aspect-w-16 aspect-h-9 w-full max-w-3xl mx-auto">
-              <iframe
-                    src="https://www.youtube.com/embed/l04Gae5jjIc?list=PLmioQB3tcdRpDRow07UlAqymhcK7NU-ix"
-                    title="Binti Wellness Circles Video"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="w-full h-[315px] rounded-md"
-                    ></iframe>
+            <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6">Watch Child and Adolescent Well-being in Action</h3>
+              <div className="w-full max-w-4xl mx-auto aspect-video">
+                <iframe
+                  src="https://drive.google.com/file/d/1gbraVh23g4_uwOuMLSY3SxgNevp_2qO_/preview"
+                  title="Child and Adolescent Well-being Video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full rounded-lg shadow-md border-0"
+                ></iframe>
               </div>
-            </div>
+</div>
+
           </div>
+
         </div>
       </section>
+
     </PageLayout>
   );
 };

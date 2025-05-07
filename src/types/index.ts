@@ -28,9 +28,9 @@ export interface NewsItem {
 }
 
 export interface Fellow {
-  id: string;
+  // id: string;
   name: string;
-  // cohort: string;
+  cohort: string;
   // country: string;
   // image: string;
   testimonial?: string;

@@ -3,9 +3,16 @@ import Section from '../components/ui/Section';
 import { fellows } from '../data/content';
 import Button from '../components/ui/Button';
 
+type Fellow = {
+  name: string;
+  cohort: string | number;
+  testimonial?: string;
+  country?: string;
+  image?: string;
+};
+
 const FellowshipsPage: React.FC = () => {
   const [activeCohort, setActiveCohort] = useState<string | null>(null);
-  const [showAllCohorts, setShowAllCohorts] = useState(false);
   const [showApplicationForm, setShowApplicationForm] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -19,23 +26,41 @@ const FellowshipsPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
 
+  // Process and enhance fellows data
+  const enhancedFellows = [
+    ...fellows.map(fellow => ({
+      ...fellow,
+      cohort: `Cohort ${fellow.cohort.toString().replace('Cohort ', '').trim()}`
+    })),
+    // Additional cohort members
+    { name: 'Aisha Mohamed', cohort: 'Cohort 4' },
+    { name: 'Mary Kaeni', cohort: 'Cohort 4' },
+    { name: 'Grace Akinyi', cohort: 'Cohort 4' },
+    { name: 'Fatoumata Diallo', cohort: 'Cohort 3' },
+    { name: 'David Omondi', cohort: 'Cohort 3' },
+    { name: 'Amina Hassan', cohort: 'Cohort 3' },
+    { name: 'John Bosco', cohort: 'Cohort 2' },
+    { name: 'Mercy Johnson', cohort: 'Cohort 2' },
+    { name: 'Sarah Chibale', cohort: 'Cohort 1' },
+    { name: 'Michael Abebe', cohort: 'Cohort 1' }
+  ];
+
   // Group fellows by cohort
-  const cohorts = fellows.reduce((acc, fellow) => {
-    if (!acc[fellow.cohort]) {
-      acc[fellow.cohort] = [];
+  const cohorts = enhancedFellows.reduce((acc, fellow) => {
+    const cohortKey = `Cohort ${fellow.cohort.toString().replace('Cohort ', '').trim()}`;
+    if (!acc[cohortKey]) {
+      acc[cohortKey] = [];
     }
-    acc[fellow.cohort].push(fellow);
+    acc[cohortKey].push(fellow);
     return acc;
-  }, {} as Record<string, typeof fellows>);
+  }, {} as Record<string, typeof enhancedFellows>);
 
   // Extract and sort cohort names
   const cohortNames = Object.keys(cohorts).sort((a, b) => {
     const numA = parseInt(a.replace('Cohort ', ''));
     const numB = parseInt(b.replace('Cohort ', ''));
-    return numB - numA; // Newest first
+    return numB - numA;
   });
-
-  const displayedCohorts = showAllCohorts ? cohortNames : cohortNames.slice(0, 3);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -49,9 +74,7 @@ const FellowshipsPage: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Here you would typically send the data to your backend
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
       console.log('Form submitted:', formData);
       setSubmitSuccess(true);
@@ -82,7 +105,6 @@ const FellowshipsPage: React.FC = () => {
       {showApplicationForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
-            {/* Close button */}
             <button 
               onClick={resetForm}
               className="absolute top-4 left-4 text-gray-500 z-10"
@@ -99,12 +121,12 @@ const FellowshipsPage: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <h4 className="text-xl font-bold mb-2">Application Submitted!</h4>
-                  <p className="mb-6">Thank you for applying to the Nivishe Fellowship. We'll review your application and get back to you soon.</p>
+                  <p className="mb-6">Thank you for joining our community. We'll review your application and get back to you soon.</p>
                   <Button onClick={resetForm}>Close</Button>
                 </div>
               ) : (
                 <>
-                  <h3 className="text-2xl font-bold mb-6 text-center">Cohort 6 Application</h3>
+                  <h3 className="text-2xl font-bold mb-6 text-center">Join Our Community</h3>
                   <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                       <div>
@@ -178,7 +200,7 @@ const FellowshipsPage: React.FC = () => {
                     </div>
 
                     <div className="mb-6">
-                      <label className="block text-sm font-medium text-gray-700 mb-1">Motivation for Applying*</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Motivation for Joining*</label>
                       <textarea
                         name="motivation"
                         value={formData.motivation}
@@ -202,7 +224,7 @@ const FellowshipsPage: React.FC = () => {
                         type="submit"
                         disabled={isSubmitting}
                       >
-                        {isSubmitting ? 'Submitting...' : 'Submit Application'}
+                        {isSubmitting ? 'Submitting...' : 'Join Community'}
                       </Button>
                     </div>
                   </form>
@@ -213,25 +235,25 @@ const FellowshipsPage: React.FC = () => {
         </div>
       )}
 
-      {/* Page Content */}
+      {/* Hero Section with Cover Image */}
       <Section
         title="Nivishe Mental Health Fellowship"
         subtitle="Building the next generation of mental health leaders across Africa"
         className="bg-black bg-[url('/images/fellowship.jpg')] bg-cover bg-center bg-blend-overlay"
         dark
       >
-        <div className="bg-orange-500 p-8 rounded-lg mt-12 max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold mb-4">Now Accepting Applications</h3>
-          <p className="text-lg mb-6">
-            Join Cohort 6 of our transformative fellowship program and become part of a growing network of mental health leaders.
+        <div className="bg-black p-8 rounded-lg mt-12 max-w-2xl mx-auto border border-gray-700">
+          <h3 className="text-2xl font-bold mb-4 text-white">Join Our Community</h3>
+          <p className="text-lg mb-6 text-gray-200">
+            Become part of our growing network of mental health professionals and advocates working to transform mental healthcare in Africa.
           </p>
           <Button 
             variant="secondary"
             size="lg"
-            className="text-white" 
+            className="bg-orange-400 hover:bg-orange-500 text-white" 
             onClick={() => setShowApplicationForm(true)}
           >
-            Apply Now
+            Join Now
           </Button>
         </div>
       </Section>
@@ -240,12 +262,11 @@ const FellowshipsPage: React.FC = () => {
       <Section 
         title="Our Fellowship Graduates" 
         subtitle="Meet the mental health leaders from previous cohorts"
-        className="bg-orange-50" // Light orange background
+        className="bg-orange-50"
       >
         <div className="max-w-6xl mx-auto">
-          {/* Cohort selection tabs */}
           <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {displayedCohorts.map(cohort => (
+            {cohortNames.map(cohort => (
               <button
                 key={cohort}
                 onClick={() => setActiveCohort(activeCohort === cohort ? null : cohort)}
@@ -260,48 +281,38 @@ const FellowshipsPage: React.FC = () => {
             ))}
           </div>
 
-          {/* Display fellows for the selected cohort */}
           {activeCohort && (
             <div className="mb-12">
               <h3 className="text-2xl font-bold mb-6 text-center">
                 {activeCohort} Fellows
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {cohorts[activeCohort].map((fellow, index) => (
                   <div 
                     key={index} 
-                    className="bg-white p-6 rounded-lg shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
+                    className="bg-white p-4 rounded-lg shadow-sm text-center"
                   >
-                    <h4 className="text-xl font-bold mb-2">{fellow.name}</h4>
-                    <p className="text-gray-600 mb-2">
-                      {fellow.title || 'Mental Health Fellow'}
-                    </p>
-                    {fellow.country && (
-                      <p className="text-sm text-gray-500">
-                        <span className="inline-block w-4 h-4 mr-1">🇰🇪</span>
-                        {fellow.country}
+                    {fellow.image && (
+                      <img 
+                        src={fellow.image} 
+                        alt={fellow.name} 
+                        className="w-32 h-32 rounded-full mx-auto mb-4"
+                      />
+                    )}
+                    <p className="text-lg font-medium">{fellow.name}</p>
+                    {fellow.testimonial && (
+                      <p className="mt-2 text-gray-600 italic text-sm">
+                        "{fellow.testimonial}"
                       </p>
                     )}
-                    {fellow.bio && (
-                      <p className="mt-4 text-gray-700">{fellow.bio}</p>
+                    {fellow.country && (
+                      <p className="mt-2 text-gray-500 text-sm">
+                        {fellow.country}
+                      </p>
                     )}
                   </div>
                 ))}
               </div>
-            </div>
-          )}
-
-          {/* Show all cohorts button */}
-          {cohortNames.length > 3 && (
-            <div className="text-center mt-8">
-              <button
-                onClick={() => setShowAllCohorts(!showAllCohorts)}
-                className={`font-medium text-orange-600 hover:underline ${
-                  showAllCohorts ? 'no-underline' : 'underline'
-                }`}
-              >
-                {showAllCohorts ? 'Show Less' : `Show All Cohorts (${cohortNames.length})`}
-              </button>
             </div>
           )}
         </div>

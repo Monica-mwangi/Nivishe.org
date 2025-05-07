@@ -8,15 +8,15 @@ import { Link } from 'react-router-dom';
 const getIcon = (iconName: string) => {
   switch (iconName) {
     case 'heart':
-      return <Heart size={32} className="text-yellow-400" />;
+      return <Heart size={32} className="text-orange-500" />;
     case 'graduation-cap':
-      return <GraduationCap size={32} className="text-yellow-400" />;
+      return <GraduationCap size={32} className="text-orange-500" />;
     case 'scale':
-      return <Scale size={32} className="text-yellow-400" />;
+      return <Scale size={32} className="text-orange-500" />;
     case 'users':
-      return <Users size={32} className="text-yellow-400" />;
+      return <Users size={32} className="text-orange-500" />;
     default:
-      return <Heart size={32} className="text-yellow-400" />;
+      return <Heart size={32} className="text-orange-500" />;
   }
 };
 
@@ -29,14 +29,14 @@ const Programs: React.FC = () => {
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Our model is designed to create sustainable, scalable impact across four strategic pillars.
           </p>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-orange-500 mx-auto mt-6"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {programs.map((program, index) => (
             <motion.div
               key={program.id}
-              className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-yellow-400 h-full flex flex-col"
+              className="bg-white p-6 rounded-lg shadow-lg border-l-4 border-orange-500 h-full flex flex-col"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

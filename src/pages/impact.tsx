@@ -72,10 +72,10 @@ const ImpactStats: React.FC = () => {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <div className="w-full h-96 md:h-[500px] relative">
+      <div className="w-full h-screen relative">
         <img
           src="/images/cute.jpg" 
-          alt="Community mental health support"
+          // alt="Community mental health support"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
@@ -124,7 +124,7 @@ const ImpactStats: React.FC = () => {
       <div className="w-full h-96 md:h-[500px] relative">
         <img
           src="/images/good-impact.jpg" 
-          alt="Community mental health support"
+          // alt="Community mental health support"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
@@ -298,7 +298,7 @@ const ImpactStats: React.FC = () => {
       </section>
 
       {/* News Section */}
-      <section className="py-20 bg-gray-100">
+      {/* <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             Latest <span className="text-orange-500">News</span>
@@ -333,7 +333,7 @@ const ImpactStats: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Newsletter Section */}
       <section className="py-20 bg-orange-500 text-white">

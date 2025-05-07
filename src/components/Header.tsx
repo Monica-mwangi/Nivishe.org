@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Button from './ui/Button';
 import { Link, useLocation } from 'react-router-dom';
+import Dropdown from './ui/Dropdown';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,8 +33,18 @@ const Header: React.FC = () => {
         { name: 'Nivishe Institute for Mental Health Learning and Research', path: '/programs/nivishe' }
       ]
     },
+    { name: 'Impact',
+      path: '/impact', 
+      dropdown: [
+        { name:'OverView', path:'/impact'},
+        { name:'Quarterly Reports', path:'/reports'},
+        { name:'Research Papers', path:'/research'},
+        { name:'News and Insights', path:'/news-insights'}
+      ]
+    
+    },
     { name: 'Fellowships', path: '/fellowships' },
-    { name: 'Impact', path: '/impact' },
+   
     { name: 'Contact', path: '/contact' },
   ];
 

@@ -26,7 +26,7 @@ const Section: React.FC<SectionProps> = ({
         {(title || subtitle) && (
           <div className="mb-12 text-center">
             {title && (
-              <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${dark ? 'text-yellow-400' : 'text-black'}`}>
+              <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${dark ? 'text-orange-400' : 'text-black'}`}>
                 {title}
               </h2>
             )}
@@ -35,7 +35,7 @@ const Section: React.FC<SectionProps> = ({
                 {subtitle}
               </p>
             )}
-            <div className="w-24 h-1 bg-yellow-400 mx-auto mt-6"></div>
+            <div className="w-24 h-1 bg-orange-400 mx-auto mt-6"></div>
           </div>
         )}
         {children}

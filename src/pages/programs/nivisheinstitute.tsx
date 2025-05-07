@@ -272,7 +272,7 @@ const NivisheInstitute = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-orange-500 text-white">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             In <span className="text-orange-100">Their Words</span>
@@ -310,38 +310,72 @@ const NivisheInstitute = () => {
 
       {/* CTA Section */}
       <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-              Join the <span className="text-orange-500">Movement</span>
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              When we build local knowledge, we build collective healing. Be part of Africa's mental health revolution.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="/fellowship" 
-                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors shadow-md"
-              >
-                Learn About the Fellowship
-              </a>
-              <a 
-                href="/apply" 
-                className="bg-white border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors shadow-md"
-              >
-                Apply or Nominate
-              </a>
-              <a 
-                href="/support" 
-                className="bg-gray-800 hover:bg-black text-white px-8 py-4 rounded-lg font-medium text-lg transition-colors shadow-md"
-              >
-                Support Our Research
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+        Nivishe Institute <span className="text-orange-500">Gallery</span>
+      </h2>
+      <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Explore our work through these moments captured at the Nivishe Institute.
+      </p>
+    </div>
+
+    {/* Image Gallery Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      {/* Gallery Item 1 */}
+      <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img 
+          src="/images/graduate-4.jpg" 
+          // alt="Nivishe Institute Activity" 
+          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
+      </div>
+      
+      {/* Gallery Item 2 */}
+      <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img 
+          src="/images/graduate-0.jpg" 
+          // alt="Community Workshop" 
+          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
+      </div>
+      
+      {/* Gallery Item 3 */}
+      <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img 
+          src="/images/graduate-1.jpg" 
+          // alt="Fellowship Program" 
+          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
+      </div>
+      
+      {/* Gallery Item 4 */}
+      <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <img 
+          src="/images/graduate-3.jpg" 
+          // alt="Research Team" 
+          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
+      </div>
+      
+      {/* Add more gallery items as needed */}
+    </div>
+
+    {/* Optional View More Button */}
+    {/* <div className="text-center mt-12">
+      <a 
+        href="/gallery" 
+        className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors shadow-md"
+      >
+        View Full Gallery
+      </a>
+    </div> */}
+  </div>
+</section>
     </div>
   );
 };

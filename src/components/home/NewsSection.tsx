@@ -13,7 +13,7 @@ const NewsSection: React.FC = () => {
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Stay updated with the latest news, publications, and stories from Nivishe Foundation.
           </p>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mt-6"></div>
+          <div className="w-24 h-1 bg-orange-400 mx-auto mt-6"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -32,7 +32,7 @@ const NewsSection: React.FC = () => {
                   alt={item.title} 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                 />
-                <div className="absolute top-0 right-0 bg-yellow-400 text-black px-3 py-1 text-sm font-bold">
+                <div className="absolute top-0 right-0 bg-orange-400 text-black px-3 py-1 text-sm font-bold">
                   {item.category}
                 </div>
               </div>

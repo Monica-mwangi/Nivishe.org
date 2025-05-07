@@ -13,6 +13,10 @@ import HHJProgram from './pages/programs/hhj';
 import BintiWellnessProgram from './pages/programs/binti';
 import ChildAndAdolescentWellbeing from './pages/programs/child-wellbeing';
 import NivisheInstitute from './pages/programs/nivisheinstitute';
+import QuarterlyReports from './pages/Quarterly-Reports'; 
+import NewsPage from './pages/News-Insights';
+import ResearchPapersPage from './pages/ResearchPapers';
+
 
 import VolunteerPage from './pages/volunteer';
 import PartnershipPage from './pages/partner';
@@ -44,6 +48,10 @@ const App: React.FC = () => {
             <Route path="/volunteer" element={<VolunteerPage/>} />
             <Route path="/partnerships" element={<PartnershipPage/>} />
             <Route path="/impact" element={<ImpactStats/>} />
+            <Route path='/reports' element={<QuarterlyReports/>} />
+            <Route path='/news-insights' element={<NewsPage/>} />
+            <Route path='/research' element={<ResearchPapersPage/>} />
+
             {/* <Route path="/impact" element={<ImpactPage/>}/> */}
             {/* <Route path="/impact" element={<ImpactStats/>} /> */}
             

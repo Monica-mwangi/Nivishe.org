@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/nivishefoundation/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-orange-500 text-white hover:bg-orange-600 p-2 rounded-full transition-colors"
@@ -29,10 +29,10 @@ const Footer: React.FC = () => {
               <Facebook size={20} />
             </a>
 
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="bg-orange-500 text-white hover:bg-orange-600 p-2 rounded-full transition-colors">
+              <a href="https://x.com/NivisheF" target="_blank" rel="noopener noreferrer" className="bg-orange-500 text-white hover:bg-orange-600 p-2 rounded-full transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-orange-500 text-white hover:bg-orange-600 p-2 rounded-full transition-colors">
+              <a href="https://www.instagram.com/nivishefoundation?igsh=MWozM29tb3A5d2MxMQ==" target="_blank" rel="noopener noreferrer" className="bg-orange-500 text-white hover:bg-orange-600 p-2 rounded-full transition-colors">
                 <Instagram size={20} />
               </a>
             </div>
@@ -40,42 +40,42 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-yellow-400">Quick Links</h3>
+            <h3 className="text-lg font-bold mb-4 text-orange-400">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-300 hover:text-yellow-400">About Us</Link></li>
-              <li><Link to="/programs/child-wellbeing" className="text-gray-300 hover:text-yellow-400">Our Programs</Link></li>
-              <li><Link to="/fellowships" className="text-gray-300 hover:text-yellow-400">Fellowships</Link></li>
-              <li><Link to="/news" className="text-gray-300 hover:text-yellow-400">News & Insights</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-yellow-400">Contact Us</Link></li>
+              <li><Link to="/" className="text-gray-300 hover:text-orange-400">About Us</Link></li>
+              <li><Link to="/programs/child-wellbeing" className="text-gray-300 hover:text-orange-400">Our Programs</Link></li>
+              <li><Link to="/fellowships" className="text-gray-300 hover:text-orange-400">Fellowships</Link></li>
+              <li><Link to="/news" className="text-gray-300 hover:text-orange-400">News & Insights</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-orange-400">Contact Us</Link></li>
             </ul>
           </div>
 
           {/* Get Involved */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-yellow-400">Get Involved</h3>
+            <h3 className="text-lg font-bold mb-4 text-orange-400">Get Involved</h3>
             <ul className="space-y-2">
-              <li><Link to="/donate" className="text-gray-300 hover:text-yellow-400">Donate</Link></li>
-              <li><Link to="/volunteer" className="text-gray-300 hover:text-yellow-400">Volunteer</Link></li>
-              <li><Link to="/partnerships" className="text-gray-300 hover:text-yellow-400">Become a Partner</Link></li>
-              <li><Link to="/fellowships" className="text-gray-300 hover:text-yellow-400">Apply for Fellowship</Link></li>
+              <li><Link to="/donate" className="text-gray-300 hover:text-orange-400">Donate</Link></li>
+              <li><Link to="/volunteer" className="text-gray-300 hover:text-orange-400">Volunteer</Link></li>
+              <li><Link to="/partnerships" className="text-gray-300 hover:text-orange-400">Become a Partner</Link></li>
+              <li><Link to="/fellowships" className="text-gray-300 hover:text-orange-400">Apply for Fellowship</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-4 text-yellow-400">Contact Us</h3>
+            <h3 className="text-lg font-bold mb-4 text-orange-400">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <MapPin size={20} className="mr-2 mt-1 text-yellow-400" />
-                <span className="text-gray-300">Nairobi, Kenya</span>
+                <MapPin size={20} className="mr-2 mt-1 text-orange-400" />
+                <span className="text-gray-300">Karanja Road, Kibera - Nairobi</span>
               </li>
               <li className="flex items-center">
-                <Phone size={20} className="mr-2 text-yellow-400" />
-                <span className="text-gray-300">+254 700 000 000</span>
+                <Phone size={20} className="mr-2 text-orange-400" />
+                <span className="text-gray-300">+254 741 706 638</span>
               </li>
               <li className="flex items-center">
-                <Mail size={20} className="mr-2 text-yellow-400" />
-                <span className="text-gray-300">info@nivishe.org</span>
+                <Mail size={20} className="mr-2 text-orange-400" />
+                <span className="text-gray-300">info@nivishefoundation.org</span>
               </li>
             </ul>
           </div>

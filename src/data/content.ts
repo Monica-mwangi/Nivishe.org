@@ -302,20 +302,22 @@ export const newsItems: NewsItem[] = [
 
 export const fellows: Fellow[] = [
   {
-    id: '1',
+    // id: '1',
     name: 'Abdallah Omar',
+    cohort: 1,
     
     testimonial: 'The Fellowship didn\'t just train me; it made me believe I could be part of the solution.'
   },
   {
-    id: '2',
+    // id: '2',
     name: 'Faith Wanjiku',
-    
+    cohort: 2,
     testimonial: 'Nivishe gave me hope when I thought my life was over. Now I am helping others find their hope too.'
   },
   {
-    id: '3',
+    // id: '3',
     name: 'Esther Mugambi',
+    cohort: 3,
    
   },
   {
@@ -323,6 +325,6 @@ export const fellows: Fellow[] = [
     name: 'David Kinyua',
     cohort: 'Cohort 2',
     country: 'Kenya',
-    image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    
   }
 ];

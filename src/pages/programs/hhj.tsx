@@ -6,6 +6,7 @@ const HHJProgram: React.FC = () => {
   return (
     <PageLayout
       coverImage="/images/her-healing-journey.jpg"
+
       title="Her Healing Journey (HHJ)"
       subtitle="“Healing is not a destination — it’s a journey.”"
     >
@@ -42,11 +43,12 @@ const HHJProgram: React.FC = () => {
         </div>
 
         {/* Systemic Barriers */}
-        <div className="bg-yellow-100 p-8 rounded-lg shadow-md text-center">
-          <h4 className="text-xl font-semibold text-gray-800">
-            Beneath these realities lie <strong>broken healthcare systems</strong> and <strong>under-trained providers</strong> — women deserve better.
-          </h4>
-        </div>
+        <div className="bg-black text-white p-8 rounded-lg shadow-md text-center">
+  <h4 className="text-xl font-semibold">
+    Beneath these realities lie <strong>broken healthcare systems</strong> and <strong>under-trained providers</strong> — women deserve better.
+  </h4>
+</div>
+
 
         {/* About Section - Enhanced */}
         <div className="bg-gradient-to-br from-orange-50 to-white p-10 rounded-2xl shadow-lg space-y-8 border border-orange-200">
@@ -98,24 +100,25 @@ const HHJProgram: React.FC = () => {
         <div className="bg-orange-100 p-8 rounded-xl shadow text-center">
           <h3 className="text-2xl font-bold text-orange-700 mb-2">Impact</h3>
           <p className="text-lg text-gray-800">
-            Since its inception, HHJ has served over <strong>5,000 women</strong> in 3 countries — improving mental wellness and quality of life.
+            Since its inception, Her Healing Journey has served over <strong>5,000 women</strong> in 3 countries — improving mental wellness and quality of life.
           </p>
         </div>
 
         {/* YouTube Section */}
-        <div className="bg-white p-8 rounded-lg shadow text-center">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Watch Her Healing Journey in Action</h3>
-          <div className="aspect-w-16 aspect-h-9 w-full max-w-3xl mx-auto">
-          <iframe
-                src="https://www.youtube.com/embed/l04Gae5jjIc?list=PLmioQB3tcdRpDRow07UlAqymhcK7NU-ix"
-                title="Binti Wellness Circles Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-[315px] rounded-md"
-                ></iframe>
-          </div>
-        </div>
+        <div className="bg-white p-8 rounded-lg shadow-lg text-center">
+  <h3 className="text-2xl font-bold text-gray-800 mb-6">Watch Her Healing Journey in Action</h3>
+  <div className="w-full max-w-4xl mx-auto h-[70vh] min-h-[450px]">
+    <iframe
+      src="https://drive.google.com/file/d/1aXTrNj83sqjwWQXTVC73dLvDyLPLVSrQ/preview"
+      title="Binti Wellness Circles Video"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      className="w-full h-full rounded-xl shadow-md"
+    ></iframe>
+  </div>
+  <p className="mt-4 text-gray-600">Double-click or pinch to zoom for full experience</p>
+</div>
 
         {/* Donate Button */}
         <div className="text-center">

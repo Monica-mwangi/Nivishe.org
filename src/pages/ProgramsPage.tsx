@@ -6,15 +6,15 @@ import { Heart, GraduationCap, Scale, Users } from 'lucide-react';
 const getIcon = (iconName: string) => {
   switch (iconName) {
     case 'heart':
-      return <Heart size={48} className="text-yellow-400" />;
+      return <Heart size={48} className="text-orange-400" />;
     case 'graduation-cap':
-      return <GraduationCap size={48} className="text-yellow-400" />;
+      return <GraduationCap size={48} className="text-orange-400" />;
     case 'scale':
-      return <Scale size={48} className="text-yellow-400" />;
+      return <Scale size={48} className="text-orange-400" />;
     case 'users':
-      return <Users size={48} className="text-yellow-400" />;
+      return <Users size={48} className="text-orange-400" />;
     default:
-      return <Heart size={48} className="text-yellow-400" />;
+      return <Heart size={48} className="text-orange-400" />;
   }
 };
 

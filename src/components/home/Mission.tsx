@@ -24,7 +24,7 @@ const Mission: React.FC = () => {
                 <Heart className="text-orange-500" size={32} />
               </div>
               
-              <h2 className="text-3xl font-bold mb-4 text-black">Our Mission</h2>
+              <h2 className="text-3xl font-bold mb-4 text-white">Our Mission</h2>
               
               {/* This paragraph will expand to make the heights equal */}
               <p className="text-lg text-black flex-grow">{mission}</p>
@@ -45,7 +45,7 @@ const Mission: React.FC = () => {
                 <span className="text-black text-2xl font-bold">✨</span>
               </div>
 
-              <h2 className="text-3xl font-bold mb-4 text-yellow-400">Our Vision</h2>
+              <h2 className="text-3xl font-bold mb-4 text-orange-500">Our Vision</h2>
 
               {/* This paragraph will expand to make the heights equal */}
               <p className="text-lg text-white flex-grow">{vision}</p>
