@@ -22,20 +22,20 @@ const HHJProgram: React.FC = () => {
 
         {/* Importance Cards */}
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white border-l-4 border-yellow-400 p-6 rounded-lg shadow text-center">
-            <h4 className="text-xl font-bold text-yellow-500 mb-2">Mental Health Risk</h4>
+          <div className="bg-white border-l-4 border-orange-400 p-6 rounded-lg shadow text-center">
+            <h4 className="text-xl font-bold text-orange-500 mb-2">Mental Health Risk</h4>
             <p className="text-gray-700">
               Teen mothers are <strong>twice as likely</strong> to face depression and anxiety compared to their peers.
             </p>
           </div>
-          <div className="bg-white border-l-4 border-yellow-400 p-6 rounded-lg shadow text-center">
-            <h4 className="text-xl font-bold text-yellow-500 mb-2">Empowering Futures</h4>
+          <div className="bg-white border-l-4 border-orange-400 p-6 rounded-lg shadow text-center">
+            <h4 className="text-xl font-bold text-orange-500 mb-2">Empowering Futures</h4>
             <p className="text-gray-700">
               Strengthening a mother’s mental well-being <strong>supports her independence, dignity, and future stability</strong>.
             </p>
           </div>
-          <div className="bg-white border-l-4 border-yellow-400 p-6 rounded-lg shadow text-center">
-            <h4 className="text-xl font-bold text-yellow-500 mb-2">Healthier Generations</h4>
+          <div className="bg-white border-l-4 border-orange-400 p-6 rounded-lg shadow text-center">
+            <h4 className="text-xl font-bold text-orange-500 mb-2">Healthier Generations</h4>
             <p className="text-gray-700">
               Mentally supported mothers raise <strong>healthier, more resilient children</strong>, improving entire communities.
             </p>

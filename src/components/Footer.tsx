@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram, Mail, MapPin, Phone } from 'lucide-react';
+import { Facebook, Twitter, Instagram,Linkedin, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -35,6 +35,9 @@ const Footer: React.FC = () => {
               <a href="https://www.instagram.com/nivishefoundation?igsh=MWozM29tb3A5d2MxMQ==" target="_blank" rel="noopener noreferrer" className="bg-orange-500 text-white hover:bg-orange-600 p-2 rounded-full transition-colors">
                 <Instagram size={20} />
               </a>
+              <a href="https://www.linkedin.com/showcase/nivishementalhealth-fellowship/" target="_blank" rel="noopener noreferrer" className="bg-orange-500 text-white hover:bg-orange-600 p-2 rounded-full transition-colors">
+                <Linkedin size={20} />
+              </a>
             </div>
           </div>
 
@@ -45,7 +48,7 @@ const Footer: React.FC = () => {
               <li><Link to="/" className="text-gray-300 hover:text-orange-400">About Us</Link></li>
               <li><Link to="/programs/child-wellbeing" className="text-gray-300 hover:text-orange-400">Our Programs</Link></li>
               <li><Link to="/fellowships" className="text-gray-300 hover:text-orange-400">Fellowships</Link></li>
-              <li><Link to="/news" className="text-gray-300 hover:text-orange-400">News & Insights</Link></li>
+              <li><Link to="/news-insights" className="text-gray-300 hover:text-orange-400">News & Insights</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-orange-400">Contact Us</Link></li>
             </ul>
           </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import Button from './ui/Button';
 import { Link, useLocation } from 'react-router-dom';
@@ -6,18 +6,8 @@ import Dropdown from './ui/Dropdown';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -41,10 +31,8 @@ const Header: React.FC = () => {
         { name:'Research Papers', path:'/research'},
         { name:'News and Insights', path:'/news-insights'}
       ]
-    
     },
     { name: 'Fellowships', path: '/fellowships' },
-   
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -61,7 +49,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-3">
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">

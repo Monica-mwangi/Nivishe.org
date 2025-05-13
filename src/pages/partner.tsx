@@ -50,10 +50,24 @@ const PartnershipPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+  
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Form submitted:', formData);
+      const response = await fetch('http://localhost:8000/api/partnership-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // Include CSRF token if your Laravel backend requires it
+          // 'X-CSRF-TOKEN': csrfToken,
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+  
+      const data = await response.json();
+      console.log('Form submitted:', data);
       setSubmitSuccess(true);
     } catch (error) {
       console.error('Submission error:', error);
@@ -61,6 +75,7 @@ const PartnershipPage: React.FC = () => {
       setIsSubmitting(false);
     }
   };
+  
 
   const resetForm = () => {
     setFormData({

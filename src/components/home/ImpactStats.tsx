@@ -80,9 +80,9 @@ const ImpactStats: React.FC = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="mb-4 bg-orange-500 rounded-full h-16 w-16 flex items-center justify-center">
+              {/* <div className="mb-4 bg-orange-500 rounded-full h-16 w-16 flex items-center justify-center">
                 <span className="text-white text-xl font-bold">{index + 1}</span>
-              </div>
+              </div> */}
               
               <motion.h3
                 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2"

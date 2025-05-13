@@ -15,9 +15,9 @@ const TeamSection: React.FC = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Founder</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Meet the dedicated professionals leading our mission to transform mental health across Kenya.
+            Meet the Founder leading our mission to transform mental health across Kenya.
           </p>
           <div className="w-24 h-1 bg-orange-400 mx-auto mt-6"></div>
         </div>
@@ -27,7 +27,7 @@ const TeamSection: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2 w-full h-100 overflow-hidden rounded-lg">
               <img 
-                src="/images/Amisa.jpg" 
+                src="/images/Amisa-Rashid.jpg" 
                 alt="Amisa Rashid" 
                 className="w-full h-full object-cover"
               />
@@ -43,19 +43,19 @@ const TeamSection: React.FC = () => {
 
         {/* Leadership Team */}
       
-<div className="mb-16 mt-20">
-  <h3 className="text-2xl font-bold mb-8 text-center">Leadership Team</h3>
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="mb-16 mt-20">
+  <h3 className="text-2xl font-bold mb-8 text-center">Our Team</h3>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
     {staffMembers.map((member, index) => (
       <motion.div
         key={member.id}
-        className="text-center border border-gray-200 rounded-lg p-6 shadow-sm flex flex-col h-full"
+        className="text-center border border-gray-200 rounded-lg p-4 shadow-sm flex flex-col max-w-xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
       >
-        <div className="relative w-full aspect-square overflow-hidden rounded-lg mb-4">
+        <div className="relative w-full h-56 overflow-hidden rounded-lg mb-4">
           <img 
             src={member.image} 
             alt={member.name} 
@@ -64,15 +64,15 @@ const TeamSection: React.FC = () => {
           />
           <button 
             onClick={() => toggleAccordion(member.id)}
-            className="absolute bottom-2 right-2 bg-orange-500 text-white rounded-full w-10 h-10 flex items-center justify-center text-xl font-bold hover:bg-orange-600 shadow-md transition-colors"
+            className="absolute bottom-2 right-2 bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold hover:bg-orange-600 shadow-md transition-colors"
           >
             {openMemberId === member.id ? '−' : '+'}
           </button>
         </div>
         <div className="flex-grow flex flex-col">
-          <h4 className="text-xl font-bold mt-4 mb-2">{member.name}</h4>
+          <h4 className="text-lg font-bold mt-2 mb-2">{member.name}</h4>
           {openMemberId === member.id && (
-            <div className="mt-4 text-orange-600 font-medium text-sm transition-all duration-300 ease-in-out">
+            <div className="mt-2 text-orange-600 font-medium text-sm transition-all duration-300 ease-in-out">
               {member.role}
             </div>
           )}
@@ -82,8 +82,10 @@ const TeamSection: React.FC = () => {
   </div>
 </div>
 
+
+
 {/* Board of Directors */}
-<div className="mb-16 mt-20">
+{/* <div className="mb-16 mt-20">
   <h3 className="text-3xl font-bold mb-12 text-center">Board of Directors</h3>
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
     {boardMembers.map((member, index) => (
@@ -120,7 +122,7 @@ const TeamSection: React.FC = () => {
       </motion.div>
     ))}
   </div>
-</div>
+</div> */}
 
         {/* Partners Section */}
   <div className="mt-24">

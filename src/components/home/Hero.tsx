@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-orange-500">Clothing</span> Communities in <span className="text-orange-500">Care</span> and <span className="text-orange-500">Healing</span>
+          <span> Clothing</span> Communities in <span className="text-orange-500">Care</span> and <span className="text-orange-500">Healing</span>
         </motion.h1>
         
         <motion.p 

@@ -29,7 +29,7 @@ const NivisheInstitute = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Hero Section with Cover Image */}
-      <div className="relative h-[100vh] min-h-[500px] flex items-center justify-center">
+      <div className="relative h-[100vh] min-h-[500px] flex items-center justify-center pt-16">
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80 z-10"></div>
         

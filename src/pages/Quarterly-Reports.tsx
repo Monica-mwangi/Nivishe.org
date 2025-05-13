@@ -33,7 +33,7 @@ const QuarterlyReports = () => {
 
   const headingStyle = {
     fontSize: '2.5rem',
-    color: '#2c3e50',
+    color: '#fb923c' ,
     marginBottom: '20px',
     textAlign: 'center',
   };
@@ -59,7 +59,7 @@ const QuarterlyReports = () => {
   };
 
   const yearHeadingStyle = {
-    color: '#2980b9',
+    color: '#fb923c' ,
     marginBottom: '15px',
     fontSize: '1.8rem',
   };
@@ -73,7 +73,7 @@ const QuarterlyReports = () => {
   const reportLinkStyle = {
     display: 'block',
     padding: '12px 15px',
-    backgroundColor: '#f8f9fa',
+    backgroundColor: '#fb923c' ,
     color: '#2980b9',
     textDecoration: 'none',
     borderRadius: '4px',
@@ -82,7 +82,7 @@ const QuarterlyReports = () => {
   };
 
   const reportLinkHoverStyle = {
-    backgroundColor: '#2980b9',
+    backgroundColor: '#fb923c' ,
     color: 'white',
     transform: 'translateY(-2px)',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
