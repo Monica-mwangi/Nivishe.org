@@ -26,20 +26,33 @@ const VolunteerPage: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Volunteer application submitted:', formData);
-      setSubmitSuccess(true);
-    } catch (error) {
-      console.error('Submission error:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+       e.preventDefault();
+       setIsSubmitting(true);
+     
+       try {
+         const response = await fetch('https://nivisheserver.edeldigital.co.ke/api/volunteer-form', {
+           method: 'POST',
+           headers: {
+             'Content-Type': 'application/json',
+           },
+           body: JSON.stringify(formData),
+         });
+     
+         if (!response.ok) {
+           throw new Error('Submission failed');
+         }
+     
+         const result = await response.json();
+         console.log('Success:', result);
+     
+         setSubmitSuccess(true);
+       } catch (error) {
+         console.error('Error submitting form:', error);
+         alert('There was an error submitting your form. Please try again.');
+       } finally {
+         setIsSubmitting(false);
+       }
+     };
 
   const resetForm = () => {
     setFormData({

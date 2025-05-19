@@ -52,25 +52,25 @@ const PartnershipPage: React.FC = () => {
     setIsSubmitting(true);
   
     try {
-      const response = await fetch('http://localhost:8000/api/partnership-form', {
+      const response = await fetch('https://nivisheserver.edeldigital.co.ke/api/partnership-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // Include CSRF token if your Laravel backend requires it
-          // 'X-CSRF-TOKEN': csrfToken,
         },
         body: JSON.stringify(formData),
       });
   
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error('Submission failed');
       }
   
-      const data = await response.json();
-      console.log('Form submitted:', data);
+      const result = await response.json();
+      console.log('Success:', result);
+  
       setSubmitSuccess(true);
     } catch (error) {
-      console.error('Submission error:', error);
+      console.error('Error submitting form:', error);
+      alert('There was an error submitting your form. Please try again.');
     } finally {
       setIsSubmitting(false);
     }

@@ -70,20 +70,34 @@ const FellowshipsPage: React.FC = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+      setIsSubmitting(true);
     
-    try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Form submitted:', formData);
-      setSubmitSuccess(true);
-    } catch (error) {
-      console.error('Submission error:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+      try {
+        const response = await fetch('https://nivisheserver.edeldigital.co.ke/api/community-form', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+    
+        if (!response.ok) {
+          throw new Error('Submission failed');
+        }
+    
+        const result = await response.json();
+        console.log('Success:', result);
+    
+        setSubmitSuccess(true);
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('There was an error submitting your form. Please try again.');
+      } finally {
+        setIsSubmitting(false);
+      }
+    };
 
   const resetForm = () => {
     setFormData({

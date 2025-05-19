@@ -158,51 +158,70 @@ export const partners: Partner[] = [
   {
     id: '3',
     name: 'Global Mental Wellness Initiative',
-    logo: '/images/Partner-3.jpg',
+    logo: '/images/giving-women.jpg',
     type: 'strategic'
   },
   {
     id: '5',
     name: 'African Development Trust',
-    logo: '/images/Partner-4.jpg',
+    logo: '/images/Nairobi-City-County.jpg',
     type: 'funding'
   },
   {
     id: '6',
     name: 'African Development Trust',
-    logo: '/images/Partner-5.jpg',
+    logo: '/images/Voluntas.png',
     type: 'funding'
   },
   {
     id: '7',
     name: 'African Development Trust',
-    logo: '/images/Partner-6.jpg',
+    logo: '/images/Grand.png',
     type: 'funding'
   },
   {
     id: '8',
     name: 'African Development Trust',
-    logo: '/images/IPHRD.png',
+    logo: '/images/help.png',
     type: 'funding'
   },
   {
     id: '9',
     name: 'African Development Trust',
-    logo: '/images/SHOFCO.png',
+    logo: '/images/creative.png',
     type: 'funding'
   },
   {
     id: '10',
     name: 'African Development Trust',
-    logo: '/images/FEMNET.png',
+    logo: '/images/mandela.png',
     type: 'funding'
   },
   {
     id: '11',
     name: 'African Development Trust',
-    logo: '/images/FEMINIST.png',
+    logo: '/images/ku.png',
+    type: 'funding'
+  },
+  {
+    id: '11',
+    name: 'African Development Trust',
+    logo: '/images/usaid.png',
+    type: 'funding'
+  },
+  {
+    id: '11',
+    name: 'African Development Trust',
+    logo: '/images/dovetail.png',
+    type: 'funding'
+  },
+  {
+    id: '11',
+    name: 'African Development Trust',
+    logo: '/images/women.png',
     type: 'funding'
   }
+ 
 ];
 
 export const impactStats: ImpactStat[] = [
