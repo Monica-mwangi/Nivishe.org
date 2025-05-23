@@ -125,8 +125,8 @@ export const staffMembers: TeamMember[] = [
   {
     id: '4',
     name: 'Rocette Juma',
-    role: 'Programs Assistant',
-    image: '/images/Nivishe-Staff-Rocette.jpeg'
+    role: 'Programs Assistant', 
+    image: '/images/Nivishe-Staff-Cate.jpeg'
   },
   {
     id: '5',
@@ -138,7 +138,7 @@ export const staffMembers: TeamMember[] = [
     id: '6',
     name: 'Cate Mwende',
     role: 'Programs Lead',
-    image: '/images/Nivishe-Staff-Cate.jpeg'
+    image: '/images/Nivishe-Staff-Rocette.jpeg'
   }
 ];
 

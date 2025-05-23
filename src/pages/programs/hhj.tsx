@@ -5,7 +5,7 @@ import PageLayout from '../../components/layout/PageLayout';
 const HHJProgram: React.FC = () => {
   return (
     <PageLayout
-      coverImage="/images/her-healing-journey.jpg"
+      coverImage="/images/healing.jpg"
 
       title="Her Healing Journey (HHJ)"
       subtitle="“Healing is not a destination — it’s a journey.”"

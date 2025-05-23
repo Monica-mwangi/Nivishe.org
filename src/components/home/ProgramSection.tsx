@@ -23,7 +23,7 @@ const ProgramsSection = () => {
       id: "child-wellbeing",
       title: "Child and Adolescent Well-being",
       description: "Specialized support for young people's mental health and development.",
-      bgImage: "/images/child-wellbeing.jpg",
+      bgImage: "/images/childwell.jpg",
       path: "/programs/child-wellbeing"
     },
     {
