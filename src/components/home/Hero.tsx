@@ -32,18 +32,18 @@ const Hero: React.FC = () => {
   return (
     <div className="relative h-screen flex items-center justify-center bg-black overflow-hidden">
       {/* Background image with overlay */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 top-[68px]">
         <img 
           src="/images/beautiful.jpg" 
           alt="Mental health support" 
-          className="object-cover w-full h-full"
+          className="object-cover w-full h-full object-[0%_5%]"
         />
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       </div>
       
       {/* Text content */}
       <div 
-        className="container mx-auto px-4 relative z-10 text-center"
+        className="container mx-auto px-4 relative z-10 text-center mt-[400px]"
         style={{ opacity: calculateOpacity() }}
       >
         <motion.h1 
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
           Transforming mental health access in Kenya's marginalized communities
         </motion.p>
         
-        <motion.div
+        {/* <motion.div
           className="flex flex-col sm:flex-row justify-center gap-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
           </Button>
                       </Link>
      
-        </motion.div>
+        </motion.div> */}
       </div>
       
       {/* Scroll indicator */}

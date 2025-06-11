@@ -75,14 +75,14 @@ const ContactCTA: React.FC = () => {
                   <Mail className="mr-3 text-orange-500 mt-1" size={20} />
                   <div>
                     <p className="font-bold text-white">Email</p>
-                    <p className="text-gray-300">info@nivishe.org</p>
+                    <p className="text-gray-300">info@nivishefoundation.org</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <Phone className="mr-3 text-orange-500 mt-1" size={20} />
                   <div>
                     <p className="font-bold text-white">Phone</p>
-                    <p className="text-gray-300">+254 700 000 000</p>
+                    <p className="text-gray-300">+254 741 706 638</p>
                   </div>
                 </div>
                 <div className="flex items-start">

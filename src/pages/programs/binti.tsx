@@ -14,7 +14,7 @@ const BintiWellnessProgram: React.FC = () => {
         <div className="bg-orange-50 border-l-4 border-orange-400 p-8 rounded-xl shadow-md text-center">
           <h2 className="text-3xl font-bold text-orange-600 mb-4">Why Binti Wellness Matters</h2>
           <p className="text-gray-700 text-lg">
-            At Nivishe, we see every adolescent girl as a daughter — a Binti — worthy of protection, love, and empowerment.
+            At Nivishe, we see every adolescent girl as a daughter a Binti worthy of protection, love, and empowerment.
             Binti Wellness Circles are weekly Saturday gatherings that provide safe and nurturing spaces for girls.
           </p>
         </div>
@@ -44,7 +44,7 @@ const BintiWellnessProgram: React.FC = () => {
         {/* Systemic Barriers */}
         <div className="bg-orange-100 p-8 rounded-lg shadow-md text-center">
           <h4 className="text-xl font-semibold text-gray-800">
-            Adolescent girls face numerous challenges that impact their mental health — it's time to change that.
+            Adolescent girls face numerous challenges that impact their mental health it's time to change that.
           </h4>
         </div>
 

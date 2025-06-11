@@ -5,18 +5,13 @@ const TraumaSection = () => {
     <div className="trauma-section text-center p-6">
       {/* Larger heading (e.g., text-3xl) */}
       <h2 className="bg-orange-400 inline-block px-4 py-2 rounded text-3xl font-bold text-black">
-        Ignored Trauma Harms Communities
+        Our Story
       </h2>
       
       {/* Larger paragraph (e.g., text-lg) */}
       <p className="text-black text-lg max-w-2xl mx-auto mt-4">
-      Ignored trauma can have long-lasting effects on individuals and entire communities, leading to cycles of
-      pain, instability, and social disconnection. When mental health struggles go unaddressed, they manifest in 
-      various ways, such as increased violence, substance abuse, and diminished economic opportunities.
-      Without proper support systems, people suffer in silence, unable to heal or reach their full potential. By
-      acknowledging and addressing trauma through community-based interventions, we can foster resilience,
-      break harmful cycles, and create a healthier, more cohesive society.
-      </p>
+  Mental health remains inaccessible for millions across Africa, with <strong>1 in 4 Kenyans</strong> experiencing mental health conditions (WHO) yet fewer than <strong>10%</strong> receiving support. Born from lived experience, Nivishe Foundation emerged to answer: <strong>"What would it mean to truly center dignity, culture, and community in mental health?"</strong> Our name ("clothe me" in Kiswahili) embodies wrapping communities in healing. We <strong>create safe spaces</strong>, <strong>build local leadership</strong>, and <strong>reimagine mental health interventions</strong> by the community, for the community. To ensure that no one, no matter their story, is left<strong> unseen, unheard, or unsupported.</strong>
+</p>
     </div>
   );
 };

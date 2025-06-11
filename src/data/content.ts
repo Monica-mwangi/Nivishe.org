@@ -3,37 +3,15 @@ import { Fellow, ImpactStat, NewsItem, Partner, Program, TeamMember } from '../t
 export const mission = 
   "We improve access to dignified, culturally sensitive and affordable mental health services and literacy in Kenya's low income and marginalized communities.";
 
+
+
 export const vision = 
   "A world where every individual, regardless of their background, can access dignified, culturally sensitive, and transformative mental health care and interventions—ensuring communities to heal, thrive, and lead with resilience.";
 
 export const tagline = "Clothing Communities in Care and Healing";
 
 export const history = `
-Mental health is a human right — yet for millions across Africa, it remains a distant dream.
-In Kenya alone, an estimated 1 in 4 people experience mental health conditions during their
-lifetime (World Health Organization), but fewer than 10% ever receive the support they need.
-For communities living in poverty, displacement, or marginalization — including Nubian,
-refugee, and indigenous groups — this gap is even wider.
-
-Nivishe Foundation was born from a deeply personal understanding of these injustices. Our
-founder grew up witnessing how mental health challenges were not only neglected, but often
-met with stigma, silence, or punishment. Access to care was rare, and when it existed, it often
-ignored the cultural realities of the people it intended to serve.
-
-We asked ourselves: "What would it mean to truly center dignity, culture, and
-community in mental health?"
-
-Nivishe, meaning "clothe me" in Kiswahili, symbolizes our mission to wrap marginalized
-communities in understanding, empathy, and healing — restoring what structural inequality
-has stripped away.
-
-We don't just provide services; we create safe spaces, build local leadership, and reimagine
-mental health interventions through African eyes and experiences. We believe in solutions
-by the community, for the community — where lived experience is valued as deeply as
-clinical knowledge.
-
-Today, our work continues to answer that original call:
-To ensure that no one, no matter their story, is left unseen, unheard, or unsupported.
+Mental health remains an inaccessible human right for millions across Africa, with 1 in 4 Kenyans experiencing mental health conditions (WHO) yet fewer than 10% receiving support a gap widening for marginalized communities including Nubian, refugee, and indigenous groups. Born from lived experience of witnessing mental health challenges met with stigma and culturally mismatched solutions, Nivishe Foundation emerged to answer our core question: "What would it mean to truly center dignity, culture, and community in mental health?" The name Nivishe ("clothe me" in Kiswahili) embodies our mission to wrap marginalized communities in understanding and healing, restoring what structural inequality stripped away. We create safe spaces and African-designed interventions that value lived experience alongside clinical expertise, training community leaders and reimagining mental health care through local perspectives. Our work continues the urgent commitment to ensure no one remains unseen, unheard, or unsupported in their mental health journey.
 `;
 
 export const values = [
@@ -122,12 +100,12 @@ export const staffMembers: TeamMember[] = [
     role: 'Finance Director',
     image: '/images/nanjala.jpg'
   },
-  {
-    id: '4',
-    name: 'Rocette Juma',
-    role: 'Programs Assistant', 
-    image: '/images/Nivishe-Staff-Cate.jpeg'
-  },
+  // {
+  //   id: '4',
+  //   name: 'Rocette Juma',
+  //   role: 'Programs Assistant', 
+  //   image: '/images/Nivishe-Staff-Cate.jpeg'
+  // },
   {
     id: '5',
     name: 'Miriam Ogwel',
@@ -136,9 +114,9 @@ export const staffMembers: TeamMember[] = [
   },
   {
     id: '6',
-    name: 'Cate Mwende',
-    role: 'Programs Lead',
-    image: '/images/Nivishe-Staff-Rocette.jpeg'
+    name: 'Naomi Ruto',
+    role: 'Programs and Impact Lead',
+    image: '/images/Naomi.jpeg'
   }
 ];
 
@@ -153,7 +131,7 @@ export const partners: Partner[] = [
     id: '2',
     name: 'Kenya Health Foundation',
     logo: '/images/Partner-2.jpg',
-    type: 'funding'
+    type: 'strategic'
   },
   {
     id: '3',
@@ -165,13 +143,13 @@ export const partners: Partner[] = [
     id: '5',
     name: 'African Development Trust',
     logo: '/images/Nairobi-City-County.jpg',
-    type: 'funding'
+    type: 'strategic'
   },
   {
     id: '6',
     name: 'African Development Trust',
     logo: '/images/Voluntas.png',
-    type: 'funding'
+    type: 'strategic'
   },
   {
     id: '7',
@@ -204,19 +182,19 @@ export const partners: Partner[] = [
     type: 'funding'
   },
   {
-    id: '11',
+    id: '12',
     name: 'African Development Trust',
     logo: '/images/usaid.png',
     type: 'funding'
   },
   {
-    id: '11',
+    id: '13',
     name: 'African Development Trust',
     logo: '/images/dovetail.png',
     type: 'funding'
   },
   {
-    id: '11',
+    id: '14',
     name: 'African Development Trust',
     logo: '/images/women.png',
     type: 'funding'

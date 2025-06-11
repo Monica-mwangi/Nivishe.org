@@ -8,7 +8,7 @@ const HHJProgram: React.FC = () => {
       coverImage="/images/healing.jpg"
 
       title="Her Healing Journey (HHJ)"
-      subtitle="“Healing is not a destination — it’s a journey.”"
+      subtitle="“Healing is not a destination, it’s a journey.”"
     >
       <section className="max-w-6xl mx-auto px-4 py-12 space-y-16">
         {/* Intro Section */}
@@ -16,7 +16,7 @@ const HHJProgram: React.FC = () => {
           <h2 className="text-3xl font-bold text-orange-600 mb-4">Why Her Healing Journey Matters</h2>
           <p className="text-gray-700 text-lg">
             Her Healing Journey is Nivishe’s signature mental health and psychosocial support program for teen and young mothers in underserved communities.
-            We walk alongside them — offering healing, hope, and empowerment.
+            We walk alongside them offering healing, hope, and empowerment.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ const HHJProgram: React.FC = () => {
         {/* Systemic Barriers */}
         <div className="bg-black text-white p-8 rounded-lg shadow-md text-center">
   <h4 className="text-xl font-semibold">
-    Beneath these realities lie <strong>broken healthcare systems</strong> and <strong>under-trained providers</strong> — women deserve better.
+    Beneath these realities lie <strong>broken healthcare systems</strong> and <strong>under-trained providers</strong> women deserve better.
   </h4>
 </div>
 
@@ -100,7 +100,7 @@ const HHJProgram: React.FC = () => {
         <div className="bg-orange-100 p-8 rounded-xl shadow text-center">
           <h3 className="text-2xl font-bold text-orange-700 mb-2">Impact</h3>
           <p className="text-lg text-gray-800">
-            Since its inception, Her Healing Journey has served over <strong>5,000 women</strong> in 3 countries — improving mental wellness and quality of life.
+            Since its inception, Her Healing Journey has served over <strong>5,000 women</strong> in 3 countries improving mental wellness and quality of life.
           </p>
         </div>
 

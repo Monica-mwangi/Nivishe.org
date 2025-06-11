@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { newsItems } from '../../data/content';
 import Button from '../ui/Button';
 import { Calendar } from 'lucide-react';
+import { Link } from 'react-router-dom'; 
 
 const NewsSection: React.FC = () => {
   return (
@@ -16,44 +17,148 @@ const NewsSection: React.FC = () => {
           <div className="w-24 h-1 bg-orange-400 mx-auto mt-6"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {newsItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              className="bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:-translate-y-2"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <div className="h-48 overflow-hidden relative">
-                <img 
-                  src={item.image} 
-                  alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                />
-                <div className="absolute top-0 right-0 bg-orange-400 text-black px-3 py-1 text-sm font-bold">
-                  {item.category}
+        <div style={{
+          width: '100%',
+          marginTop: '20px',
+        }}>
+          <h3 style={{
+            fontSize: '24px',
+            fontWeight: '600',
+            color: '#EA580C',
+            marginBottom: '30px',
+            textAlign: 'center',
+            fontFamily: "'Montserrat', sans-serif",
+          }}>Recent Newsletters</h3>
+          
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+            gap: '30px',
+          }}>
+            {[
+              {
+                id: 1,
+                title: 'Nurturing women globally.',
+                date: 'April 2025',
+                excerpt: 'A celebration of the incredible women who nurture our world.',
+                image: '/images/News.jpg', // Fixed image path
+                link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=f4da8e5704',
+              },
+              {
+                id: 2,
+                title: 'women’s empowerment and community resilience.',
+                date: 'March 2025',
+                excerpt: 'We are Back, Stronger Than Ever!',
+                image: '/images/Newsletter-2.jpg', // Fixed image path
+                link: 'https://mailchi.mp/628e9743c58d/nivishe-march-newsletter-157',
+              },
+            ].map(newsletter => (
+              <div
+                key={newsletter.id}
+                style={{
+                  backgroundColor: 'white',
+                  borderRadius: '12px',
+                  overflow: 'hidden',
+                  boxShadow: '0 5px 15px rgba(234, 88, 12, 0.1)',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  cursor: 'pointer',
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-8px)';
+                  e.currentTarget.style.boxShadow = '0 15px 30px rgba(234, 88, 12, 0.15)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 5px 15px rgba(234, 88, 12, 0.1)';
+                }}
+              >
+                <div style={{
+                  height: '180px',
+                  overflow: 'hidden',
+                }}>
+                  <img
+                    src={newsletter.image}
+                    alt={newsletter.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      transition: 'transform 0.5s ease',
+                    }}
+                    onMouseOver={(e) => {
+                      e.target.style.transform = 'scale(1.05)';
+                    }}
+                    onMouseOut={(e) => {
+                      e.target.style.transform = 'scale(1)';
+                    }}
+                  />
+                </div>
+                <div style={{
+                  padding: '25px',
+                }}>
+                  <div style={{
+                    color: '#EA580C',
+                    fontSize: '14px',
+                    marginBottom: '8px',
+                    fontWeight: '500',
+                  }}>
+                    {newsletter.date}
+                  </div>
+                  <h4 style={{
+                    fontSize: '20px',
+                    fontWeight: '600',
+                    marginBottom: '12px',
+                    color: '#EA580C',
+                    fontFamily: "'Montserrat', sans-serif",
+                    lineHeight: '1.4',
+                  }}>
+                    {newsletter.title}
+                  </h4>
+                  <p style={{
+                    fontSize: '15px',
+                    lineHeight: '1.6',
+                    color: '#555',
+                    marginBottom: '20px',
+                  }}>
+                    {newsletter.excerpt}
+                  </p>
+                  <a
+                    href={newsletter.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      fontSize: '15px',
+                      fontWeight: '600',
+                      color: '#EA580C',
+                      display: 'inline-block',
+                      position: 'relative',
+                      cursor: 'pointer',
+                      fontFamily: "'Montserrat', sans-serif",
+                      textDecoration: 'none',
+                    }}
+                  >
+                    Read Newsletter
+                    <div style={{
+                      position: 'absolute',
+                      bottom: '-2px',
+                      left: '0',
+                      width: '0',
+                      height: '2px',
+                      backgroundColor: '#EA580C',
+                      transition: 'width 0.3s ease',
+                    }}></div>
+                  </a>
                 </div>
               </div>
-              <div className="p-5">
-                <div className="flex items-center text-gray-500 text-sm mb-2">
-                  <Calendar size={14} className="mr-1" />
-                  <span>{item.date}</span>
-                </div>
-                <h3 className="text-lg font-bold mb-2 line-clamp-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">{item.excerpt}</p>
-                <Button variant="outline" size="sm" className="!text-sm">
-                  Read More
-                </Button>
-              </div>
-            </motion.div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="text-center">
-          <Button variant="primary">View All News</Button>
-        </div>
+       {/* <div className="text-center">
+  <Link to="/news-letter">
+    <Button variant="primary">View All News</Button>
+  </Link>
+</div> */}
       </div>
     </section>
   );

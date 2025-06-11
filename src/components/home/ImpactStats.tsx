@@ -1,19 +1,25 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { impactStats } from '../../data/content';
+import { Link } from 'react-router-dom';
 
 const ImpactStats: React.FC = () => {
   const [isInView, setIsInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const [counters, setCounters] = useState(impactStats.map(() => 0));
 
-  // Intersection Observer for scroll trigger
+  // Filter out specific cards
+  const filteredStats = impactStats.filter(stat => 
+    !stat.description.includes("caregivers, teachers, and frontline responders") &&
+    !stat.description.includes("incarcerated youth and adults received")
+  );
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          startCounters(); // Trigger counter animation
+          startCounters();
         }
       },
       { threshold: 0.3 }
@@ -23,12 +29,11 @@ const ImpactStats: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  // Animate counters
   const startCounters = () => {
-    impactStats.forEach((stat, index) => {
+    filteredStats.forEach((stat, index) => {
       const target = parseInt(stat.figure.replace(/,/g, ''));
-      const duration = 2000; // 2 seconds
-      const increment = target / (duration / 16); // 60fps
+      const duration = 2000;
+      const increment = target / (duration / 16);
 
       let current = 0;
       const timer = setInterval(() => {
@@ -48,70 +53,76 @@ const ImpactStats: React.FC = () => {
 
   return (
     <section 
-      className="relative py-20 bg-black/60 overflow-hidden"
+      className="relative py-20"
       style={{
-        backgroundImage: "url('/images/partner.jpg')", // Add your image path
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/partner.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundBlendMode: 'overlay'
+        backgroundAttachment: 'fixed'
       }}
     >
-      {/* Dark overlay for better text contrast */}
-      <div className="absolute inset-0 bg-black/40 z-0"></div>
-      
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Impact</h2>
-          <p className="text-lg text-white/90 max-w-2xl mx-auto">
-            At Nivishe Foundation, impact is not just measured by numbers — it's measured by healing.
-          </p>
-          <div className="w-24 h-1 bg-orange-500 mx-auto mt-6"></div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            className="text-3xl md:text-4xl font-bold text-white mb-4"
+          >
+            Transforming Lives
+          </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : {}}
+            className="w-24 h-1 bg-orange-500 mx-auto mt-6"
+          />
         </div>
 
+        {/* Impact Stats Grid */}
         <div 
           ref={ref}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 mb-12"
         >
-          {impactStats.map((stat, index) => (
+          {filteredStats.map((stat, index) => (
             <motion.div
               key={stat.id}
-              className="relative overflow-hidden bg-white/50 p-6 rounded-lg shadow-2xl text-center flex flex-col items-center hover:scale-105 transition-transform duration-300"
-              initial={{ opacity: 0.5, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="text-center"
             >
-              {/* <div className="mb-4 bg-orange-500 rounded-full h-16 w-16 flex items-center justify-center">
-                <span className="text-white text-xl font-bold">{index + 1}</span>
-              </div> */}
-              
-              <motion.h3
-                className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2"
-                initial={{ opacity: 0.5 }}
-                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ duration: 1.5, delay: index * 0.1 + 0.3 }}
+              <motion.div
+                className="text-4xl md:text-5xl font-bold text-orange-500 mb-2"
+                initial={{ scale: 0 }}
+                animate={isInView ? { scale: 1 } : {}}
+                transition={{ type: 'spring', delay: index * 0.1 + 0.3 }}
               >
                 {counters[index].toLocaleString()}+
-              </motion.h3>
-              
-              <p className="text-gray-700">{stat.description}</p>
+              </motion.div>
+              <p className="text-white text-sm md:text-base font-medium px-2">
+                {stat.description.split(' ').slice(0, 5).join(' ')}
+              </p>
             </motion.div>
           ))}
         </div>
+
+        {/* Impact CTA Button */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.5 }}
+          className="text-center"
+        >
+          <Link
+            to="/impact"
+            className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full transition-colors duration-300"
+          >
+            Read About Our Impact
+          </Link>
+        </motion.div>
       </div>
 
-      {/* Bottom curve */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20">
-        <svg
-          className="relative block w-full h-[100px]"
-          viewBox="0 0 1440 100"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,0 C480,100 960,100 1440,0 L1440,100 L0,100 Z"
-            className="fill-white"
-          />
-        </svg>
-      </div>
+      {/* Clean Bottom Divider */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-white -mb-px" />
     </section>
   );
 };

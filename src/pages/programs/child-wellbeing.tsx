@@ -20,7 +20,7 @@ const ChildAndAdolescentWellbeing: React.FC = () => {
               “Prevention is the first act of healing.”
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              Many of the children we serve are the sons and daughters of the young mothers coming to our center — a new generation carrying invisible burdens from poverty, violence, displacement, or family trauma.
+              Many of the children we serve are the sons and daughters of the young mothers coming to our center a new generation carrying invisible burdens from poverty, violence, displacement, or family trauma.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-orange-100 p-6 rounded-lg shadow-sm">
