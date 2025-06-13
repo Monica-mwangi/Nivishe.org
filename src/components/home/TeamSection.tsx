@@ -34,7 +34,7 @@ const TeamSection: React.FC = () => {
             </div>
             <div className="md:w-1/2 w-full">
               <h3 className="text-2xl font-bold mb-4">Meet Our Founder: Amisa Rashid</h3>
-              <p className="text-gray-700 text-lg">
+              <p className="text-gray-700 text-lg text-justify">
                 Amisa Rashid is the visionary behind Nivishe Foundation. With a deep passion for mental health advocacy, she has dedicated her life to empowering communities, shaping mental health policy, and fostering inclusive well-being initiatives in Kenya. Her leadership has driven the organization to national recognition, emphasizing compassion, resilience, and innovation.
               </p>
             </div>

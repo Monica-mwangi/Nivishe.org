@@ -239,35 +239,61 @@ const ImpactStats: React.FC = () => {
             </div>
 
             <div className="lg:w-1/2 h-80">
-              <ResponsiveContainer width="100%" height="100%">
-                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={programData}>
-                  <PolarGrid />
-                  <PolarAngleAxis dataKey="subject" stroke="#4B5563" />
-                  <PolarRadiusAxis angle={30} domain={[0, 100]} stroke="#4B5563" />
-                  <Radar
-                    name="Program Effectiveness"
-                    dataKey="A"
-                    stroke="#F97316"
-                    fill="#F97316"
-                    fillOpacity={0.6}
-                  />
-                  <Tooltip contentStyle={{ backgroundColor: '#1F2937', borderColor: '#374151' }} itemStyle={{ color: '#F3F4F6' }} />
-                </RadarChart>
-              </ResponsiveContainer>
-            </div>
+  <ResponsiveContainer width="100%" height="100%">
+    <BarChart
+      data={programData}
+      margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+      layout="vertical" // Horizontal bars (change to "horizontal" for vertical bars)
+    >
+      <CartesianGrid strokeDasharray="3 3" stroke="#4B5563" opacity={0.3} />
+      <XAxis 
+        type="number" 
+        domain={[0, 100]} 
+        stroke="#F97316" 
+        tick={{ fill: '#6B7280' }}
+      />
+      <YAxis 
+        dataKey="subject" 
+        type="category" 
+        stroke="#F97316" 
+        tick={{ fill: '#6B7280' }}
+      />
+      <Tooltip 
+        contentStyle={{ 
+          backgroundColor: '#1F2937', 
+          borderColor: '#374151',
+          borderRadius: '0.5rem',
+          color: '#FFFFFF' // Set all text to white
+        }} 
+        itemStyle={{ color: '#FFFFFF' }}
+        formatter={(value) => `${value}%`} // Add percentage sign
+      />
+      <Bar
+        dataKey="A"
+        name="Program Effectiveness"
+        fill="#F97316"
+        radius={[0, 4, 4, 0]} // Rounded right corners
+      >
+        {programData.map((entry, index) => (
+          <Cell key={`cell-${index}`} fill="#F97316" opacity={0.8} />
+        ))}
+      </Bar>
+    </BarChart>
+  </ResponsiveContainer>
+</div>
           </div>
 
           <div className="mt-12 max-w-3xl mx-auto text-center text-gray-600">
             <p>
               Our programs show high effectiveness across all measured areas, with particular strength in providing
-              emotional support (95%) and building peer support networks (90%). The radar chart demonstrates our
+              emotional support (95%) and building peer support networks (90%). The above charts demonstrates our
               comprehensive approach to mental health support.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-orange-500 text-white">
+      {/* <section className="py-20 bg-orange-500 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Stay Updated</h2>
@@ -291,7 +317,7 @@ const ImpactStats: React.FC = () => {
             </form>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

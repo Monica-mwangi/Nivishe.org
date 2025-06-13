@@ -5,7 +5,7 @@ import PageLayout from '../../components/layout/PageLayout';
 const HHJProgram: React.FC = () => {
   return (
     <PageLayout
-      coverImage="/images/healing.jpg"
+      coverImage="/images/journey.jpg"
 
       title="Her Healing Journey (HHJ)"
       subtitle="“Healing is not a destination, it’s a journey.”"
@@ -69,28 +69,28 @@ const HHJProgram: React.FC = () => {
             <div className="space-y-4 text-gray-700">
               <div className="flex items-start gap-3">
                 <span className="text-orange-500 mt-1">💬</span>
-                <p><strong>Gender-sensitive mental health support:</strong> Therapy, trauma healing circles, peer support.</p>
+                <p className="text-justify"><strong>Gender-sensitive mental health support:</strong> Therapy, trauma healing circles, peer support.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-orange-500 mt-1">🌱</span>
-                <p><strong>Life skills development:</strong> Confidence, emotional intelligence, leadership.</p>
+                <p className="text-justify"><strong>Life skills development:</strong> Confidence, emotional intelligence, leadership.</p>
               </div>
             </div>
             <div className="space-y-4 text-gray-700">
               <div className="flex items-start gap-3">
                 <span className="text-orange-500 mt-1">👶</span>
-                <p><strong>Parenting education:</strong> Positive parenting for secure, nurturing homes.</p>
+                <p className="text-justify"><strong>Parenting education:</strong> Positive parenting for secure, nurturing homes.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-orange-500 mt-1">💼</span>
-                <p><strong>Economic empowerment:</strong> Savings groups, micro-finance, and entrepreneurship skills.</p>
+                <p className="text-justify"><strong>Economic empowerment:</strong> Savings groups, micro-finance, and entrepreneurship skills.</p>
               </div>
             </div>
           </div>
 
           <div className="bg-white border-l-4 border-orange-400 p-6 rounded-md shadow text-center mt-6">
             <h3 className="text-xl font-bold text-gray-800 mb-2">Why this matters</h3>
-            <p className="text-md text-gray-700">
+            <p className="text-md text-gray-700 text-justify">
               Teen mothers are <strong>twice as likely</strong> to experience depression and anxiety. Supporting their mental health not only helps them heal, but builds stronger, more resilient children and communities.
             </p>
           </div>
@@ -99,7 +99,7 @@ const HHJProgram: React.FC = () => {
         {/* Impact */}
         <div className="bg-orange-100 p-8 rounded-xl shadow text-center">
           <h3 className="text-2xl font-bold text-orange-700 mb-2">Impact</h3>
-          <p className="text-lg text-gray-800">
+          <p className="text-lg text-gray-800 text-justify">
             Since its inception, Her Healing Journey has served over <strong>5,000 women</strong> in 3 countries improving mental wellness and quality of life.
           </p>
         </div>
@@ -121,14 +121,14 @@ const HHJProgram: React.FC = () => {
 </div>
 
         {/* Donate Button */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <a
             href="/donate" // Replace with your actual donation link
             className="inline-block bg-orange-600 hover:bg-orange-700 text-white text-lg font-semibold py-3 px-6 rounded-full shadow-md transition duration-300"
           >
             Donate Now
           </a>
-        </div>
+        </div> */}
       </section>
     </PageLayout>
   );

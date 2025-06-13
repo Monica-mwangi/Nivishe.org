@@ -20,7 +20,7 @@ const Section: React.FC<SectionProps> = ({
   return (
     <section 
       id={id} 
-      className={`py-16 md:py-24 ${dark ? 'bg-gray-900 text-white' : 'bg-white text-black'} ${className}`}
+      className={`py-6 md:py-10 ${dark ? 'bg-gray-900 text-white' : 'bg-white text-black'} ${className}`}
     >
       <div className="container mx-auto px-4 md:px-8">
         {(title || subtitle) && (

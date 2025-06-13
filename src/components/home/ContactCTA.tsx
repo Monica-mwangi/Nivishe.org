@@ -19,7 +19,7 @@ const ContactCTA: React.FC = () => {
     setErrorMessage('');
 
     try {
-      const response = await fetch('https://nivisheserver.edeldigital.co.ke/api/contact-form', {
+      const response = await fetch('https://server.nivishefoundation.org/api/contact-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

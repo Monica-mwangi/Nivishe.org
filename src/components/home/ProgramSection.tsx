@@ -21,13 +21,13 @@ const ProgramsSection = () => {
       id: "child-wellbeing",
       title: "Systems Change: Health, Justice Reform and Policy Advocacy",
       bgImage: "/images/childwell.jpg",
-      path: "/systems-change",
+      path: "/criminal",
     },
     {
       id: "nivishe",
       title: "Community-centred Healing and Innovation",
       bgImage: "/images/wellness.jpg",
-      path: "/community-innovation",
+      path: "/healing",
     },
   ];
 

@@ -140,7 +140,7 @@ const JusticeHealthProgram = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Marginalized Youth Disproportionately Affected</h3>
-                    <p>Communities like the Nubians face systemic barriers leading to higher incarceration rates with minimal mental health support.</p>
+                    <p className="text-justify">Communities like the Nubians face systemic barriers leading to higher incarceration rates with minimal mental health support.</p>
                   </div>
                 </div>
                 
@@ -150,7 +150,7 @@ const JusticeHealthProgram = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Intergenerational Trauma</h3>
-                    <p>Without intervention, cycles of trauma, poverty, and criminalization repeat across generations.</p>
+                    <p className="text-justify">Without intervention, cycles of trauma, poverty, and criminalization repeat across generations.</p>
                   </div>
                 </div>
                 
@@ -160,7 +160,7 @@ const JusticeHealthProgram = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Lack of Mental Health Literacy</h3>
-                    <p>Frontline responders often lack training to recognize and appropriately respond to mental health crises.</p>
+                    <p className="text-justify">Frontline responders often lack training to recognize and appropriately respond to mental health crises.</p>
                   </div>
                 </div>
               </div>
@@ -269,7 +269,7 @@ const JusticeHealthProgram = () => {
               className="mt-8 bg-gradient-to-r from-orange-500 to-amber-600 p-8 rounded-xl text-white text-center"
             >
               <h3 className="text-2xl font-bold mb-4">Our Vision for Transformation</h3>
-              <p className="text-lg max-w-3xl mx-auto">
+              <p className="text-lg max-w-3xl mx-auto text-justify">
                 We're turning prisons from places of punishment into spaces of potential healing, 
                 breaking intergenerational cycles of trauma, and building systems that prioritize 
                 dignity, rehabilitation, and second chances.
@@ -353,7 +353,7 @@ const JusticeHealthProgram = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-900 to-black text-white">
+      {/* <section className="py-16 bg-gradient-to-r from-orange-900 to-black text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ scale: 0.95 }}
@@ -381,10 +381,10 @@ const JusticeHealthProgram = () => {
               >
                 Learn More
               </a> */}
-            </div>
+            {/* </div>
           </motion.div>
         </div>
-      </section>
+      </section> */} 
 
       
     </div>

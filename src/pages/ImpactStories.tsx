@@ -322,7 +322,7 @@ const ImpactStories = () => {
                 }}>
                   Program
                 </h4>
-                <p>{selectedStory.program}</p>
+                <p className="text-justify">{selectedStory.program}</p>
               </div>
               
               <div>
@@ -335,7 +335,7 @@ const ImpactStories = () => {
                 }}>
                   Duration
                 </h4>
-                <p>{selectedStory.duration}</p>
+                <p className="text-justify">{selectedStory.duration}</p>
               </div>
             </div>
             

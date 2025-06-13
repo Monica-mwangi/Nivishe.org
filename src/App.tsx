@@ -26,6 +26,7 @@ import PerspectiveBlog from './pages/PerspectiveBlog';
 import ImpactStories from './pages/ImpactStories';
 import Tales from './pages/Tales';
 import AboutUs from './pages/StrategyAbout';
+import ResourcesPage from './pages/Resources';
 
 import VolunteerPage from './pages/volunteer';
 import PartnershipPage from './pages/partner';
@@ -85,6 +86,7 @@ const App: React.FC = () => {
             <Route path='/healing' element={<CreativeHealing/>}/>
             <Route path='/Digital'element={<DigitalInnovationLab/>}/>
             <Route path='/safe-healing' element={<SafeHealingSpaces/>}/>
+            <Route path='/resources' element={<ResourcesPage/>} />
             {/* <Route path='/about' element={<AboutUs/>} /> */}
 
             {/* <Route path="/impact" element={<ImpactPage/>}/> */}

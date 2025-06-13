@@ -84,16 +84,17 @@ const Header: React.FC = () => {
         {
           name: 'Reports and Publications',
           submenu: [
-            { name: 'Annual Reports', path: '/reports' },
+            // { name: 'Annual Reports', path: '/reports' },
             { name: 'Comic Book Publication', path: '/publication' },
-            {
-              name: 'Insights and stories',
-              submenu: [
-                { name: 'Perspective Blog', path: '/blogs' },
-                { name: 'Grantee Impact Stories', path: '/impact-stories' },
-                { name: 'Tales', path: '/tales' }
-              ]
-            }
+            { name: 'Resources', path:'/resources' },
+            // {
+            //   name: 'Insights and stories',
+            //   submenu: [
+            //     { name: 'Perspective Blog', path: '/blogs' },
+            //     { name: 'Grantee Impact Stories', path: '/impact-stories' },
+            //     { name: 'Tales', path: '/tales' }
+            //   ]
+            // }
           ]
         }
       ]
@@ -122,9 +123,18 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md py-3" ref={dropdownRef}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold text-orange-600">
-          Nivishe
-        </Link>
+        {/* Logo */}
+<Link to="/" className="flex items-center gap-2">
+  {/* Add your logo image here */}
+  <img 
+    src="/images/logo.png"  // Update this path to your actual logo
+    alt="Nivishe Logo"
+    className="h-16 w-auto"  // Adjust height as needed
+  />
+  {/* <span className="text-2xl font-bold text-orange-600">
+    Nivishe
+  </span> */}
+</Link>
 
         {/* Right-aligned Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
@@ -155,7 +165,7 @@ const Header: React.FC = () => {
                                       e.stopPropagation();
                                       toggleSubDropdown(item.name);
                                     }}
-                                    className="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                    className="w-full text-left flex justify-between items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                   >
                                     {item.name}
                                     <ChevronDown size={14} />
@@ -169,15 +179,15 @@ const Header: React.FC = () => {
                                             {subItem.submenu ? (
                                               <>
                                                 <button
-                                                  onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    toggleThirdDropdown(subItem.name);
-                                                  }}
-                                                  className="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                                >
-                                                  {subItem.name}
-                                                  <ChevronDown size={12} />
-                                                </button>
+                                        onClick={(e) => {
+                                          e.stopPropagation();
+                                          toggleThirdDropdown(subItem.name);
+                                        }}
+                                        className="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                      >
+                                        {subItem.name}
+                                        <ChevronDown size={12} />
+                                      </button>
                                                 
                                                 {openThirdDropdown === subItem.name && (
                                                   <div className="absolute right-full top-0 mr-1 w-64 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
@@ -243,7 +253,7 @@ const Header: React.FC = () => {
               </div>
             ))}
           </nav>
-          <Button variant="primary">Donate</Button>
+          {/* <Button variant="primary">Donate</Button> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -373,9 +383,9 @@ const Header: React.FC = () => {
                 )}
               </div>
             ))}
-            <div className="mt-4">
+            {/* <div className="mt-4">
               <Button variant="primary" className="w-full">Donate</Button>
-            </div>
+            </div> */}
           </div>
         </div>
       )}

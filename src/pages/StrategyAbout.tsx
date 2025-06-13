@@ -75,7 +75,7 @@ const AboutUs = () => {
                 className="bg-white p-8 border-l-4 border-orange-600"
               >
                 <h2 className="text-2xl font-bold mb-4 text-orange-600">Our Mission</h2>
-                <p className="text-lg">
+                <p className="text-lg text-justify">
                   We improve access to dignified, culturally sensitive and affordable mental health 
                   services and literacy in Kenya's low income and marginalized communities.
                 </p>
@@ -89,7 +89,7 @@ const AboutUs = () => {
                 className="bg-white p-8 border-l-4 border-orange-600"
               >
                 <h2 className="text-2xl font-bold mb-4 text-orange-600">Our Vision</h2>
-                <p className="text-lg">
+                <p className="text-lg text-justify">
                   A world where every individual, regardless of their background, can access dignified,
                   culturally sensitive, and transformative mental health care and interventions
                   ensuring communities to heal, thrive, and lead with resilience.
@@ -123,7 +123,7 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-lg"
+                className="text-lg text-justify"
               >
                 Mental health is a human right yet for millions across Africa, it remains a distant dream.
                 In Kenya alone, an estimated 1 in 4 people experience mental health conditions during their
@@ -137,7 +137,7 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-lg"
+                className="text-lg text-justify"
               >
                 Nivishe Foundation was born from a deeply personal understanding of these injustices. Our
                 founder grew up witnessing how mental health challenges were not only neglected, but often
@@ -160,7 +160,7 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="text-lg"
+                className="text-lg text-justify"
               >
                 Nivishe, meaning "clothe me" in Kiswahili, symbolizes our mission to wrap marginalized
                 communities in understanding, empathy, and healing restoring what structural inequality
@@ -172,7 +172,7 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="text-lg"
+                className="text-lg text-justify"
               >
                 We don't just provide services; we create safe spaces, build local leadership, and reimagine
                 mental health interventions through African eyes and experiences. We believe in solutions
@@ -185,7 +185,7 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
                 viewport={{ once: true }}
-                className="text-lg font-semibold"
+                className="text-lg font-semibold text-justify"
               >
                 Today, our work continues to answer that original call: To ensure that no one, no matter their story, is left unseen, unheard, or unsupported.
               </motion.p>
@@ -407,7 +407,7 @@ const AboutUs = () => {
       </div>
 
       {/* CTA */}
-      <section className="py-20 bg-orange-600 text-center">
+      {/* <section className="py-20 bg-orange-600 text-center">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ scale: 0.95 }}
@@ -428,7 +428,7 @@ const AboutUs = () => {
               >
                 Get Involved
               </a> */}
-              <a
+              {/* <a
                 href="/donate"
                 className="bg-black hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-medium transition-colors shadow-lg"
               >
@@ -437,7 +437,7 @@ const AboutUs = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      // </section> */} 
     </div>
   );
 };

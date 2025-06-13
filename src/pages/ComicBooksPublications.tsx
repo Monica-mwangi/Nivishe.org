@@ -48,7 +48,7 @@ const ComicBooksPublications = () => {
             id: 1,
             title: 'Comic Book.',
             excerpt: 'A visually-driven Comic Book with impactful storytelling',
-            image: '/images/comic.jpg',
+            image: '/images/book.png',
             link: 'https://nivishefoundation.org/wp-content/uploads/2025/04/Understanding-Emotions_02_PRINT_14dec24-1_compressed.pdf', // update with real link if available
           },
         ].map(item => (

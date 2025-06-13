@@ -52,7 +52,7 @@ const PartnershipPage: React.FC = () => {
     setIsSubmitting(true);
   
     try {
-      const response = await fetch('https://nivisheserver.edeldigital.co.ke/api/partnership-form', {
+      const response = await fetch('https://server.nivishefoundation.org/api/partnership-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

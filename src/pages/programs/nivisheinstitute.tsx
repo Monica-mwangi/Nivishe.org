@@ -235,62 +235,53 @@ const NivisheInstitute = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-          {/* Gallery Section */}
-       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {/* Gallery Item 1 */}
-      <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <img 
-          src="/images/graduate-4.jpg" 
-          // alt="Nivishe Institute Activity" 
-          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-          loading="lazy"
-        />
+         {/* Gallery Section (Commented Out) */}
+      {/*
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img 
+            src="/images/graduate-4.jpg" 
+            alt="Nivishe Institute Activity" 
+            className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+        <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img 
+            src="/images/graduate-5.jpg" 
+            alt="Community Workshop" 
+            className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+        <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img 
+            src="/images/graduate-1.jpg" 
+            alt="Fellowship Program" 
+            className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+        <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <img 
+            src="/images/graduate-3.jpg" 
+            alt="Research Team" 
+            className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
       </div>
-      
-      {/* Gallery Item 2 */}
-      <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <img 
-          src="/images/graduate-5.jpg" 
-          // alt="Community Workshop" 
-          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-          loading="lazy"
-        />
-      </div>
-      
-      {/* Gallery Item 3 */}
-      <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <img 
-          src="/images/graduate-1.jpg" 
-          // alt="Fellowship Program" 
-          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-          loading="lazy"
-        />
-      </div>
-      
-      {/* Gallery Item 4 */}
-      <div className="gallery-item overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <img 
-          src="/images/graduate-3.jpg" 
-          // alt="Research Team" 
-          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-          loading="lazy"
-        />
-      </div>
-      
-      {/* Add more gallery items as needed */}
-    </div>
 
-    {/* Optional View More Button */}
-    {/* <div className="text-center mt-12">
-      <a 
-        href="/gallery" 
-        className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors shadow-md"
-      >
-        View Full Gallery
-      </a>
-    </div> */}
-  </div>
+      <div className="text-center mt-12">
+        <a 
+          href="/gallery" 
+          className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-medium text-lg transition-colors shadow-md"
+        >
+          View Full Gallery
+        </a>
+      </div>
+      */}
+    </div>
     
   );
 };

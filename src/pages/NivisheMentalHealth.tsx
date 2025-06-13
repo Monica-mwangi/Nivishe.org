@@ -133,11 +133,11 @@ const NivisheFellowship = () => {
               <div className="space-y-4">
                 <div className="bg-white/10 p-4 rounded-lg">
                   <p className="font-bold mb-2">Community Sessions</p>
-                  <p>Fellows design interventions using art, storytelling, and local languages</p>
+                  <p className="text-justify">Fellows design interventions using art, storytelling, and local languages</p>
                 </div>
                 <div className="bg-white/10 p-4 rounded-lg">
                   <p className="font-bold mb-2">Capacity Building</p>
-                  <p>Training includes neuroscience basics and trauma-informed care</p>
+                  <p className="text-justify">Training includes neuroscience basics and trauma-informed care</p>
                 </div>
                 {/* <a 
                   href="/fellowship-stories" 
@@ -164,7 +164,7 @@ const NivisheFellowship = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Become a Mental Health Champion
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 max-w-2xl mx-auto text-justify">
               Join our Pan-African network of change-makers creating culturally-rooted mental health solutions
             </p>
             <a

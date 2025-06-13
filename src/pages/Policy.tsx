@@ -161,7 +161,7 @@ const Policy = () => {
                       <Flame className="w-5 h-5" />
                     </div>
                     <div>
-                      <p>Policies must be co-created with communities, not for them</p>
+                      <p className="text-justify">Policies must be co-created with communities, not for them</p>
                     </div>
                   </div>
                   
@@ -170,7 +170,7 @@ const Policy = () => {
                       <HeartHandshake className="w-5 h-5" />
                     </div>
                     <div>
-                      <p>Infused with the resilience, dreams, and wisdom of those who've lived through injustice</p>
+                      <p className="text-justify">Infused with the resilience, dreams, and wisdom of those who've lived through injustice</p>
                     </div>
                   </div>
                   
@@ -179,7 +179,7 @@ const Policy = () => {
                       <Scale className="w-5 h-5" />
                     </div>
                     <div>
-                      <p>Mental health as a fundamental human right, not a luxury</p>
+                      <p className="text-justify">Mental health as a fundamental human right, not a luxury</p>
                     </div>
                   </div>
                 </div>
@@ -320,13 +320,13 @@ const Policy = () => {
               viewport={{ once: true }}
               className="mt-12"
             >
-              <a
+              {/* <a
                 href="/donate"
                 className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-colors shadow-lg hover:shadow-orange-500/30"
               >
                     Donate
                 <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
+              </a> */}
             </motion.div>
             
             <motion.div

@@ -21,14 +21,14 @@ const NewsSection: React.FC = () => {
           width: '100%',
           marginTop: '20px',
         }}>
-          <h3 style={{
+          {/* <h3 style={{
             fontSize: '24px',
             fontWeight: '600',
             color: '#EA580C',
             marginBottom: '30px',
             textAlign: 'center',
             fontFamily: "'Montserrat', sans-serif",
-          }}>Recent Newsletters</h3>
+          }}>Recent Newsletters</h3> */}
           
           <div style={{
             display: 'grid',
@@ -36,6 +36,15 @@ const NewsSection: React.FC = () => {
             gap: '30px',
           }}>
             {[
+               {
+                id: 3,
+                title: 'Linkages Series.',
+                date: 'June 2025',
+                excerpt: 'Improving mental health care in the global south. Workshop Series 3, June 20th 12:00 - 12:45 ET',
+                image: '/images/linkage-cropped.png', // Fixed image path
+                link: 'https://www.neidonors.org/copy-of-linkages-series-1',
+                linkLabel: 'Click here to register'
+              },
               {
                 id: 1,
                 title: 'Nurturing women globally.',
@@ -43,15 +52,18 @@ const NewsSection: React.FC = () => {
                 excerpt: 'A celebration of the incredible women who nurture our world.',
                 image: '/images/News.jpg', // Fixed image path
                 link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=f4da8e5704',
+                linkLabel: 'Read Newsletter'
               },
               {
                 id: 2,
-                title: 'women’s empowerment and community resilience.',
+                title: 'Women’s empowerment and community resilience.',
                 date: 'March 2025',
                 excerpt: 'We are Back, Stronger Than Ever!',
                 image: '/images/Newsletter-2.jpg', // Fixed image path
                 link: 'https://mailchi.mp/628e9743c58d/nivishe-march-newsletter-157',
+                linkLabel: 'Read Newsletter'
               },
+             
             ].map(newsletter => (
               <div
                 key={newsletter.id}
@@ -137,7 +149,7 @@ const NewsSection: React.FC = () => {
                       textDecoration: 'none',
                     }}
                   >
-                    Read Newsletter
+                    {newsletter.linkLabel}
                     <div style={{
                       position: 'absolute',
                       bottom: '-2px',

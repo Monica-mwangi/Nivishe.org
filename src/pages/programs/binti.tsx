@@ -67,24 +67,24 @@ const BintiWellnessProgram: React.FC = () => {
             <div className="space-y-4 text-gray-700">
               <div className="flex items-start gap-3">
                 <span className="text-orange-500 mt-1">🎨</span>
-                <p><strong>Safe, joyful spaces:</strong> Where play, art, dance, and storytelling are tools for healing.</p>
+                <p className="text-justify"><strong>Safe, joyful spaces:</strong> Where play, art, dance, and storytelling are tools for healing.</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-orange-500 mt-1">🧠</span>
-                <p><strong>Mental health literacy:</strong> Learning about emotions, coping strategies, and building resilience.</p>
+                <p className="text-justify"><strong>Mental health literacy:</strong> Learning about emotions, coping strategies, and building resilience.</p>
               </div>
             </div>
             <div className="space-y-4 text-gray-700">
               <div className="flex items-start gap-3">
                 <span className="text-orange-500 mt-1">👯‍♀️</span>
-                <p><strong>Peer support networks:</strong> Reducing isolation and promoting a sense of belonging.</p>
+                <p className="text-justify"><strong>Peer support networks:</strong> Reducing isolation and promoting a sense of belonging.</p>
               </div>
             </div>
           </div>
 
           <div className="bg-white border-l-4 border-orange-400 p-6 rounded-md shadow text-center mt-6">
             <h3 className="text-xl font-bold text-gray-800 mb-2">Why this matters</h3>
-            <p className="text-md text-gray-700">
+            <p className="text-md text-gray-700 text-justify">
               Adolescence is a critical period for mental health. About 50% of mental health conditions begin by the age of 14 (WHO), yet many go undetected, especially in marginalized communities.
               Binti Wellness Circles offer early support to prevent future mental health struggles and help girls build emotional strength.
             </p>
@@ -94,7 +94,7 @@ const BintiWellnessProgram: React.FC = () => {
         {/* Impact */}
         <div className="bg-orange-100 p-8 rounded-xl shadow text-center">
           <h3 className="text-2xl font-bold text-orange-700 mb-2">Impact</h3>
-          <p className="text-lg text-gray-800">
+          <p className="text-lg text-gray-800 text-justify">
             Binti Wellness Circles have reached over <strong>1,500 girls</strong>, helping them build confidence and resilience in their communities.
           </p>
         </div>
@@ -115,14 +115,14 @@ const BintiWellnessProgram: React.FC = () => {
 </div>
 
         {/* Donate Button */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <a
             href="/donate"
             className="inline-block bg-orange-600 hover:bg-orange-700 text-white text-lg font-semibold py-3 px-6 rounded-full shadow-md transition duration-300"
           >
             Donate Now
           </a>
-        </div>
+        </div> */}
       </section>
     </PageLayout>
   );

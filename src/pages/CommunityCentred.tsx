@@ -206,7 +206,7 @@ const CommunityHealing = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-black text-center">
+      {/* <section className="py-16 bg-black text-center">
         <div className="container mx-auto px-4">
           <motion.div 
             className="bg-orange-600/20 p-8 rounded-2xl backdrop-blur-sm"
@@ -229,10 +229,10 @@ const CommunityHealing = () => {
               {/* <button className="border-2 border-orange-600 text-orange-600 hover:bg-orange-600/10 px-6 py-3 rounded-lg font-medium transition-colors">
                 Support Innovation
               </button> */}
-            </div>
+            {/* </div>
           </motion.div>
         </div>
-      </section>
+      </section> */} 
     </div>
   );
 };

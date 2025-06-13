@@ -25,24 +25,24 @@ const ChildAndAdolescentWellbeing: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-orange-100 p-6 rounded-lg shadow-sm">
                 <h4 className="font-bold text-orange-700 mb-2">🎲 Play-based Therapy</h4>
-                <p>Children process emotions through play long before they can express them with words.</p>
+                <p className="text-justify">Children process emotions through play long before they can express them with words.</p>
               </div>
               <div className="bg-orange-100 p-6 rounded-lg shadow-sm">
                 <h4 className="font-bold text-orange-700 mb-2">🎨 Trauma Healing Activities</h4>
-                <p>We use art, drama, music, and movement to help children express and release emotions safely.</p>
+                <p className="text-justify">We use art, drama, music, and movement to help children express and release emotions safely.</p>
               </div>
               <div className="bg-orange-100 p-6 rounded-lg shadow-sm">
                 <h4 className="font-bold text-orange-700 mb-2">💬 Emotional Literacy</h4>
-                <p>Helping children identify their feelings and develop coping strategies early in life.</p>
+                <p className="text-justify">Helping children identify their feelings and develop coping strategies early in life.</p>
               </div>
               <div className="bg-orange-100 p-6 rounded-lg shadow-sm">
                 <h4 className="font-bold text-orange-700 mb-2">🤝 Parental Support Linkages</h4>
-                <p>We support healing in children by involving mothers and caregivers in their mental health journey.</p>
+                <p className="text-justify">We support healing in children by involving mothers and caregivers in their mental health journey.</p>
               </div>
             </div>
             <div className="bg-orange-500 text-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-2">Why this matters</h3>
-              <p className="text-md">
+              <p className="text-md text-justify">
                 Early, trauma-informed mental health care is critical. Without intervention, children exposed to toxic stress face increased risk of lifelong physical and mental health issues. Our program ensures they receive the nurturing support they need for a healthier, stronger future.
               </p>
             </div>
