@@ -159,21 +159,39 @@ const ImpactStats: React.FC = () => {
         </div>
       </div>
 
-      <div className="lg:w-1/2 h-80">
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={impactData}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#4B5563" />
-            <XAxis dataKey="name" stroke="#D1D5DB" />
-            <YAxis stroke="#D1D5DB" />
-            <Tooltip contentStyle={{ backgroundColor: '#1F2937', borderColor: '#374151' }} itemStyle={{ color: '#F3F4F6' }} />
-            <Bar dataKey="value">
-              {impactData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={entry.fill} />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
+      <div className="lg:w-1/3 h-80">  {/* Changed from lg:w-1/2 to lg:w-1/3 */}
+  <ResponsiveContainer width="100%" height="100%">
+    <BarChart 
+      data={impactData}
+      margin={{ top: 20, right: 30, left: 20, bottom: 5 }}  // Added margin for better spacing
+      barSize={30}  // Explicitly set bar thickness
+    >
+      <CartesianGrid strokeDasharray="3 3" stroke="#4B5563" />
+      <XAxis 
+        dataKey="name" 
+        stroke="#D1D5DB" 
+        tick={{ fontSize: 12 }}  // Smaller font for x-axis labels
+      />
+      <YAxis 
+        stroke="#D1D5DB" 
+        width={40}  // Reduced y-axis width
+      />
+      <Tooltip 
+        contentStyle={{ 
+          backgroundColor: '#1F2937', 
+          borderColor: '#374151',
+          fontSize: '12px'  // Smaller tooltip font
+        }} 
+        itemStyle={{ color: '#F3F4F6' }} 
+      />
+      <Bar dataKey="value">
+        {impactData.map((entry, index) => (
+          <Cell key={`cell-${index}`} fill={entry.fill} />
+        ))}
+      </Bar>
+    </BarChart>
+  </ResponsiveContainer>
+</div>
     </div>
   </div>
 </section>

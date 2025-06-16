@@ -32,6 +32,11 @@ const ProgramsSection = () => {
   ];
 
   const handleReadMore = (path) => {
+    // Scroll to top before navigation
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: Adds smooth scrolling
+    });
     navigate(path);
   };
 
