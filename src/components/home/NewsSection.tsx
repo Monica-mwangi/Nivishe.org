@@ -37,14 +37,32 @@ const NewsSection: React.FC = () => {
           }}>
             {[
                {
-                id: 3,
-                title: 'Linkages Series.',
+                id: 2,
+                title: 'partnership of nivishe and IREX',
                 date: 'June 2025',
-                excerpt: 'Improving mental health care in the global south. Workshop Series 3, June 20th 12:00 - 12:45 ET',
-                image: '/images/linkage-cropped.png', // Fixed image path
-                link: 'https://www.neidonors.org/copy-of-linkages-series-1',
-                linkLabel: 'Click here to register'
+                excerpt: 'Nivishe Foundation & IREX Partner to Tackle Technology-Facilitated Gender-Based Violence',
+                image: '/images/irex-partner.png', // Fixed image path
+                link: '/announcements',
+                linkLabel: 'Read News'
               },
+              {
+                id: 2,
+                title: 'Nivishe Foundation & Basic Needs Basic Rights Kenya Partnership',
+                date: 'June 2025',
+                excerpt: 'Nivishe Foundation & Basic Needs Basic Rights Kenya Announce Partnership to Bolster Mental Health Support for Displaced Communities',
+                image: '/images/Nairobi.png', // Fixed image path
+                link: '/announcements',
+                linkLabel: 'Read News'
+              },
+              //  {
+              //   id: 3,
+              //   title: 'Linkages Series.',
+              //   date: 'June 2025',
+              //   excerpt: 'Improving mental health care in the global south. Workshop Series 3, June 20th 12:00 - 12:45 ET',
+              //   image: '/images/linkage-cropped.png', // Fixed image path
+              //   link: 'https://www.neidonors.org/copy-of-linkages-series-1',
+              //   linkLabel: 'Click here to register'
+              // },
               {
                 id: 1,
                 title: 'Nurturing women globally.',
@@ -63,6 +81,8 @@ const NewsSection: React.FC = () => {
                 link: 'https://mailchi.mp/628e9743c58d/nivishe-march-newsletter-157',
                 linkLabel: 'Read Newsletter'
               },
+              
+              
              
             ].map(newsletter => (
               <div

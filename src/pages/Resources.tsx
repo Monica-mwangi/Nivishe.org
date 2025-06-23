@@ -11,6 +11,14 @@ const ResourcesPage = () => {
       fileUrl: 'https://nivishe-new.edeldigital.co.ke/assets/NF-Pitchdeck.pdf', // Replace with your actual file URL
       date: 'June 2025'
     },
+     {
+      id: 1,
+      title: 'Rest At Resistance',
+      description: 'Navigating mental Health during Political Crisis In KenyaContext: The Current Climate in Kenya',
+      image: '/images/Resistance.png', // Replace with your image path
+      fileUrl: 'https://nivishefoundation.org/wp-content/uploads/2025/04/rest in resistance.pdf', // Replace with your actual file URL
+      date: 'June 2025'
+    },
     // Add more resources here as needed
   ];
 

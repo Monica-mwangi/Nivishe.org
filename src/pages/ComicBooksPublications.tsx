@@ -1,6 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const ComicBooksPublications = () => {
+  const [views, setViews] = useState(0);
+
+  // Fetch current view count on mount
+  useEffect(() => {
+    axios.get('https://server.nivishefoundation.org/api/comic-book-views')
+      .then(res => {
+        setViews(res.data.views);
+      })
+      .catch(err => console.error(err));
+  }, []);
+
+  const handleViewClick = (link) => {
+    // Open PDF in a new tab
+    window.open(link, '_blank');
+
+    // Increment views
+    axios.post('https://server.nivishefoundation.org/api/comic-book-view')
+      .then(() => {
+        setViews(prev => prev + 1);
+      })
+      .catch(err => console.error(err));
+  };
+
   return (
     <div 
       id="newsletter"
@@ -49,7 +73,7 @@ const ComicBooksPublications = () => {
             title: 'Comic Book.',
             excerpt: 'A visually-driven Comic Book with impactful storytelling',
             image: '/images/book.png',
-            link: 'https://nivishefoundation.org/wp-content/uploads/2025/04/Understanding-Emotions_02_PRINT_14dec24-1_compressed.pdf', // update with real link if available
+            link: 'https://nivishefoundation.org/wp-content/uploads/2025/04/Understanding-Emotions_02_PRINT_14dec24-1_compressed.pdf',
           },
         ].map(item => (
           <div
@@ -104,21 +128,27 @@ const ComicBooksPublications = () => {
               }}>
                 {item.excerpt}
               </p>
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
+
+              <button
+                onClick={() => handleViewClick(item.link)}
                 style={{
                   fontSize: '15px',
                   fontWeight: '600',
                   color: '#EA580C',
-                  display: 'inline-block',
                   fontFamily: "'Montserrat', sans-serif",
                   textDecoration: 'none',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: 0,
                 }}
               >
                 View Comic Book
-              </a>
+              </button>
+
+              <p style={{ fontSize: '13px', marginTop: '10px', color: '#777' }}>
+                Downloaded {views} times
+              </p>
             </div>
           </div>
         ))}
