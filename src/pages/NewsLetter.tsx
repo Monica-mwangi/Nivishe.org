@@ -1,19 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Newsletter = () => {
-  const [email, setEmail] = useState('');
-  const [subscribed, setSubscribed] = useState(false);
-  
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (email) {
-      // In a real app, this would send the email to a backend service
-      console.log('Subscribing email:', email);
-      setSubscribed(true);
-      setEmail('');
-    }
-  };
-
   return (
     <div 
       id="newsletter"
@@ -66,93 +53,40 @@ const Newsletter = () => {
             Subscribe to our monthly newsletter for expert advice, inspiring stories, 
             mindfulness techniques, and updates on our latest resources to support your wellbeing.
           </p>
-          
-          {subscribed ? (
-            <div style={{
-              backgroundColor: '#10B981',
+
+          <a
+            href="https://mailchi.mp/a744b87ddacc/nivishe-community"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              backgroundColor: '#EA580C',
               color: 'white',
-              padding: '20px',
+              fontWeight: '600',
+              padding: '16px 30px',
+              border: 'none',
               borderRadius: '8px',
-              fontSize: '18px',
-              fontWeight: '500',
-              animation: 'fadeIn 0.5s ease-in',
-            }}>
-              Thank you for subscribing! Your first newsletter will arrive soon.
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '20px',
-              width: '100%',
-            }}>
-              <div style={{
-                display: 'flex',
-                gap: '10px',
-                width: '100%',
-                flexWrap: 'wrap',
-              }}>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email address"
-                  required
-                  style={{
-                    flex: '1',
-                    minWidth: '250px',
-                    padding: '16px 20px',
-                    fontSize: '16px',
-                    borderRadius: '8px',
-                    border: '1px solid #ddd',
-                    outline: 'none',
-                    transition: 'border-color 0.3s',
-                    fontFamily: 'inherit',
-                  }}
-                  onFocus={(e) => e.target.style.borderColor = '#EA580C'}
-                  onBlur={(e) => e.target.style.borderColor = '#ddd'}
-                />
-                <button
-                  type="submit"
-                  style={{
-                    backgroundColor: '#EA580C',
-                    color: 'white',
-                    fontWeight: '600',
-                    padding: '16px 30px',
-                    border: 'none',
-                    borderRadius: '8px',
-                    cursor: 'pointer',
-                    fontSize: '16px',
-                    transition: 'all 0.3s ease',
-                    fontFamily: "'Montserrat', sans-serif",
-                  }}
-                  onMouseOver={(e) => {
-                    e.target.style.backgroundColor = '#C2410C';
-                    e.target.style.transform = 'translateY(-2px)';
-                  }}
-                  onMouseOut={(e) => {
-                    e.target.style.backgroundColor = '#EA580C';
-                    e.target.style.transform = 'translateY(0)';
-                  }}
-                >
-                  Subscribe
-                </button>
-              </div>
-              <p style={{
-                fontSize: '14px',
-                color: '#666',
-                marginTop: '10px',
-              }}>
-                We respect your privacy. Unsubscribe at any time.
-              </p>
-            </form>
-          )}
+              cursor: 'pointer',
+              fontSize: '16px',
+              fontFamily: "'Montserrat', sans-serif",
+              textAlign: 'center',
+              textDecoration: 'none',
+              display: 'inline-block',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseOver={(e) => {
+              e.target.style.backgroundColor = '#C2410C';
+              e.target.style.transform = 'translateY(-2px)';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.backgroundColor = '#EA580C';
+              e.target.style.transform = 'translateY(0)';
+            }}
+          >
+            Subscribe to Newsletter
+          </a>
         </div>
-        
-        <div style={{
-          width: '100%',
-          marginTop: '20px',
-        }}>
+
+        <div style={{ width: '100%', marginTop: '20px' }}>
           <h3 style={{
             fontSize: '24px',
             fontWeight: '600',
@@ -170,18 +104,26 @@ const Newsletter = () => {
             {[
               {
                 id: 1,
-                title: 'Nurturing women globally.',
-                date: 'April 2025',
-                excerpt: 'a celebration of the incredible women who nurture our world.',
-                image: '/images/News.jpg', // Fixed image path
-                link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=f4da8e5704',
+                title: 'Fellowship Milestones, Partnerships & Mental Health Advocacy.',
+                date: 'May 2025',
+                excerpt: 'Nivishe Foundation celebrated a successful May 2025 with fellowship milestones, strategic partnerships, a podcast feature, and impactful events while gearing up for a dynamic June ahead.',
+                image: '/images/May.png',
+                link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=214599c6ba',
               },
               {
                 id: 2,
-                title: 'women’s empowerment and community resilience.',
+                title: 'Nurturing women globally.',
+                date: 'April 2025',
+                excerpt: 'A celebration of the incredible women who nurture our world.',
+                image: '/images/News.jpg',
+                link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=f4da8e5704',
+              },
+              {
+                id: 3,
+                title: 'Women’s empowerment and community resilience.',
                 date: 'March 2025',
                 excerpt: 'We are Back, Stronger Than Ever!',
-                image: '/images/Newsletter-2.jpg', // Fixed image path
+                image: '/images/Newsletter-2.jpg',
                 link: 'https://mailchi.mp/628e9743c58d/nivishe-march-newsletter-157',
               },
             ].map(newsletter => (
@@ -204,10 +146,7 @@ const Newsletter = () => {
                   e.currentTarget.style.boxShadow = '0 5px 15px rgba(234, 88, 12, 0.1)';
                 }}
               >
-                <div style={{
-                  height: '180px',
-                  overflow: 'hidden',
-                }}>
+                <div style={{ height: '180px', overflow: 'hidden' }}>
                   <img
                     src={newsletter.image}
                     alt={newsletter.title}
@@ -225,9 +164,7 @@ const Newsletter = () => {
                     }}
                   />
                 </div>
-                <div style={{
-                  padding: '25px',
-                }}>
+                <div style={{ padding: '25px' }}>
                   <div style={{
                     color: '#EA580C',
                     fontSize: '14px',
@@ -262,57 +199,17 @@ const Newsletter = () => {
                       fontSize: '15px',
                       fontWeight: '600',
                       color: '#EA580C',
-                      display: 'inline-block',
-                      position: 'relative',
-                      cursor: 'pointer',
-                      fontFamily: "'Montserrat', sans-serif",
                       textDecoration: 'none',
+                      fontFamily: "'Montserrat', sans-serif",
                     }}
                   >
                     Read Newsletter
-                    <div style={{
-                      position: 'absolute',
-                      bottom: '-2px',
-                      left: '0',
-                      width: '0',
-                      height: '2px',
-                      backgroundColor: '#EA580C',
-                      transition: 'width 0.3s ease',
-                    }}></div>
                   </a>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        
-        {/* <a
-          href="#"
-          style={{
-            backgroundColor: 'transparent',
-            color: '#EA580C',
-            border: '2px solid #EA580C',
-            borderRadius: '8px',
-            padding: '14px 28px',
-            fontSize: '16px',
-            fontWeight: '600',
-            cursor: 'pointer',
-            marginTop: '20px',
-            transition: 'all 0.3s ease',
-            fontFamily: "'Montserrat', sans-serif",
-            textDecoration: 'none',
-          }}
-          onMouseOver={(e) => {
-            e.target.style.backgroundColor = '#EA580C';
-            e.target.style.color = 'white';
-          }}
-          onMouseOut={(e) => {
-            e.target.style.backgroundColor = 'transparent';
-            e.target.style.color = '#EA580C';
-          }}
-        >
-          View All Newsletters
-        </a> */}
       </div>
     </div>
   );

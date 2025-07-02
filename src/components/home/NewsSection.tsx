@@ -38,7 +38,7 @@ const NewsSection: React.FC = () => {
             {[
                {
                 id: 2,
-                title: 'partnership of nivishe and IREX',
+                title: 'Partnership of Nivishe and IREX',
                 date: 'June 2025',
                 excerpt: 'Nivishe Foundation & IREX Partner to Tackle Technology-Facilitated Gender-Based Violence',
                 image: '/images/irex-partner.png', // Fixed image path
@@ -63,6 +63,15 @@ const NewsSection: React.FC = () => {
               //   link: 'https://www.neidonors.org/copy-of-linkages-series-1',
               //   linkLabel: 'Click here to register'
               // },
+               {
+                id: 1,
+                title: 'Fellowship Milestones, Partnerships & Mental Health Advocacy.',
+                date: 'May 2025',
+                excerpt: 'Nivishe Foundation celebrated a successful May 2025 with fellowship milestones, strategic partnerships, a podcast feature, and impactful events while gearing up for a dynamic June ahead.',
+                image: '/images/May.png', // Fixed image path
+                link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=214599c6ba',
+                linkLabel: 'Read Newsletter'
+              },
               {
                 id: 1,
                 title: 'Nurturing women globally.',
