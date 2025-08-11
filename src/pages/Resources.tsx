@@ -7,7 +7,7 @@ const ResourcesPage = () => {
       id: 1,
       title: 'Mental Health Pitch Deck',
       description: 'A comprehensive presentation on mental health awareness, strategies, and support systems. Includes statistics, intervention methods, and community resources.',
-      image: '/images/woow.jpg', // Replace with your image path
+      image: '/images/woow.webp', // Replace with your image path
       fileUrl: 'https://nivishe-new.edeldigital.co.ke/assets/NF-Pitchdeck.pdf', // Replace with your actual file URL
       date: 'June 2025'
     },

@@ -9,7 +9,7 @@ const CreativeHealing = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/healing.jpg" // Replace with an appropriate image path
+            src="/images/healing.webp" // Replace with an appropriate image path
             alt="Art therapy in action"
             className="w-full h-full object-cover object-center brightness-90 contrast-105 saturate-110 transition-transform duration-500 ease-in-out transform hover:scale-105"
           />

@@ -75,7 +75,7 @@ const VolunteerPage: React.FC = () => {
       <Section
         title="Become a Volunteer"
         subtitle="Join our team and make a difference in mental health awareness"
-        className="bg-black bg-[url('/images/volunteer.jpg')] bg-cover bg-center bg-blend-overlay min-h-[400px]"
+        className="bg-black bg-[url('/images/volunteer.webp')] bg-cover bg-center bg-blend-overlay min-h-[400px]"
         dark
       >
         <div className="max-w-2xl mx-auto text-center">

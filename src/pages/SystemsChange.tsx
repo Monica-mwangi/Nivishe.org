@@ -16,7 +16,7 @@ const SystemsChange = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80 z-10"></div>
         <div className="absolute inset-0 z-0 top-[68px] ">
           <img
-            src="/images/Systems.jpg"
+            src="/images/Systems.webp"
             alt="Systemic change"
             className="w-full h-full object-cover object-[0%_30%]"
           />

@@ -65,13 +65,13 @@ export const boardMembers: TeamMember[] = [
     id: '4',
     name: 'Amina Hersi',
     role: 'Board Member',
-    image: 'images/amina-hermsi.png'
+    image: 'images/amina-hermsi.webp'
   },
   {
     id: '5',
     name: 'Diana Waithanji',
     role: 'Board Member',
-    image: 'images/diana.png'
+    image: 'images/diana.webp'
   },
   {
     id: '6',
@@ -86,7 +86,7 @@ export const staffMembers: TeamMember[] = [
     id: '1',
     name: 'Amisa Rashid',
     role: 'Founder and Executive Director',
-    image: '/images/Amisa.jpg',
+    image: '/images/Amisa.webp',
   },
   {
     id: '2',

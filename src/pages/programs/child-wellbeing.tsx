@@ -6,7 +6,7 @@ import PageLayout from '../../components/layout/PageLayout';
 const ChildAndAdolescentWellbeing: React.FC = () => {
   return (
     <PageLayout
-      coverImage="/images/child.jpg"
+      coverImage="/images/child.webp"
       title="Child and Adolescent Well-being Program"
       subtitle="Building a stronger future through early, trauma-informed mental health care"
     >

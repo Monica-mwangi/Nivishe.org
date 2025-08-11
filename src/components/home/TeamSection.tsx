@@ -27,7 +27,7 @@ const TeamSection: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2 w-full h-100 overflow-hidden rounded-lg">
               <img 
-                src="/images/Amisa-Rashid.jpg" 
+                src="/images/Amisa-Rashid.webp" 
                 alt="Amisa Rashid" 
                 className="w-full h-full object-cover"
               />

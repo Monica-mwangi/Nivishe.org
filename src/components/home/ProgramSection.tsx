@@ -8,25 +8,25 @@ const ProgramsSection = () => {
     {
       id: "hhj",
       title: "Maternal Child, and Adolescent Mental Health",
-      bgImage: "/images/healing-journey.jpg",
+      bgImage: "/images/healing-journey.webp",
       path: "/programs/hhj",
     },
     {
       id: "binti",
       title: "Nivishe Institute for Mental Health Learning and Research",
-      bgImage: "/images/nivishe-institute.jpg",
+      bgImage: "/images/nivishe-institute.webp",
       path: "/institute/fellowship",
     },
     {
       id: "child-wellbeing",
       title: "Systems Change: Health, Justice Reform and Policy Advocacy",
-      bgImage: "/images/childwell.jpg",
+      bgImage: "/images/childwell.webp",
       path: "/criminal",
     },
     {
       id: "nivishe",
       title: "Community-centred Healing and Innovation",
-      bgImage: "/images/wellness.jpg",
+      bgImage: "/images/wellness.webp",
       path: "/healing",
     },
   ];

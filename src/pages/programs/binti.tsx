@@ -5,7 +5,7 @@ import PageLayout from '../../components/layout/PageLayout';
 const BintiWellnessProgram: React.FC = () => {
   return (
     <PageLayout
-      coverImage="/images/binti.jpg"
+      coverImage="/images/binti.webp"
       title="Binti Wellness Circles"
       subtitle="“Every girl deserves a safe space to grow, play, and just be.”"
     >

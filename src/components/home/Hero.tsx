@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
       {/* Background image with overlay */}
       <div className="absolute inset-0 z-0 top-[68px]">
         <img 
-          src="/images/beautiful.jpg" 
+          src="/images/beautiful.webp" 
           alt="Mental health support" 
           className="object-cover w-full h-full object-[0%_5%]"
         />

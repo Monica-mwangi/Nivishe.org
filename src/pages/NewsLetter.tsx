@@ -102,6 +102,25 @@ const Newsletter = () => {
             gap: '30px',
           }}>
             {[
+                            {
+                id: 5,
+                title: 'Fellowships, Partnerships & Healing Language in Mental Health Advocacy.',
+                date: 'July 2025',
+                excerpt: "Nivishe launched a stigma-busting Kiswahili Mental Health Lexicon, expanded fellowships for refugees, drove key partnerships in peacebuilding and girls' empowerment, and championed digital-age mental health advocacy propelling culturally rooted care across East Africa.",
+                image: '/images/july.png',
+                link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=df7874177b',
+                linkLabel: 'Read Newsletter'
+              },
+              {
+                id: 4,
+                title: 'Significant strides made in advancing mental health awareness and support through the Nivishe network.',
+                date: 'June 2025',
+                excerpt: 'Nivishe Foundation celebrates major strides in mental health advocacy, partnerships, and youth empowerment, while unveiling a refreshed, impact-driven website.',
+                image: '/images/june.png', // Fixed image path
+                link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=2e51a80165',
+
+                linkLabel: 'Read Newsletter'
+              },
               {
                 id: 1,
                 title: 'Fellowship Milestones, Partnerships & Mental Health Advocacy.',

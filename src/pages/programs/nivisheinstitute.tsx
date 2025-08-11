@@ -23,7 +23,7 @@ const NivisheInstitute = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80 z-10"></div>
         <div className="absolute inset-0 z-0 top-[68px]">
           <img
-            src="/images/graduation.jpg" 
+            src="/images/graduation.webp" 
             alt="African mental health education"
             className="w-full h-full object-cover"
           />

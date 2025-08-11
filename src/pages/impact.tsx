@@ -8,11 +8,43 @@ import {
 
 const ImpactStats: React.FC = () => {
   const keyIndicators = [
-    { name: 'Mothers Supported', value: 1200, description: 'Teen and young mothers receiving mental health support' },
-    { name: 'Adolescent Girls', value: 700, description: 'Girls engaged in safe healing spaces' },
-    { name: 'Children Benefited', value: 800, description: 'Children receiving play-based mental health support' },
-    { name: 'Reported Improvement', value: 95, description: 'Participants feeling better able to manage emotions' },
-  ];
+  {
+    name: 'Marginalized Communities Reached',
+    value: '15',
+    description: 'Marginalized communities reached through mental health, SRHR, and climate resilience programs',
+  },
+  {
+    name: 'Young Mothers Supported',
+    value: '1200',
+    description: 'Young mothers supported through mentorship, psychosocial care, and SRHR education',
+  },
+  {
+    name: 'Art Therapy Workshops Held',
+    value: '25',
+    description: 'Creative expression and healing sessions using art, storytelling, and movement therapy in both urban and marginalized regions',
+  },
+  {
+    name: 'Fellows Trained',
+    value: '370',
+    description: 'Fellows trained, reaching 24,000+ community members indirectly through grassroots mental health initiatives',
+  },
+  {
+    name: 'Comic Books',
+    value: '250',
+    description: 'Over 250 hard copy distributed',
+  },
+   {
+    name: 'Digital Comic Books Distributed',
+    value: '800',
+    description: 'Over 800+ digital comic books or VR products distributed',
+  },
+  {
+    name: 'Mental Health Clubs Formed (Sauti ya Dada)',
+    value: '12',
+    description: '12 mental health school clubs formed',
+  },
+];
+
 
   const impactData = [
     { name: 'Mothers', value: 1200, fill: '#F97316' },
@@ -32,17 +64,17 @@ const ImpactStats: React.FC = () => {
     {
       title: "For Mothers",
       items: [
-        "Reduced depression and anxiety symptoms",
-        "Improved parenting skills",
-        "Economic empowerment through micro-financing",
-        "Stronger support networks"
+        "89% of the mothers showed improved scores on parenting skills.",
+        "Participants reported stronger support networks",
+        "20 active members economically empowered through micro financing",
+        "88% mothers reported reduced depression and anxiety"
       ]
     },
     {
       title: "For Children",
       items: [
-        "Better emotional regulation",
-        "Improved social skills",
+        "18 referrals for early trauma intervention promoting timely support & recovery",
+        "116% increase in social skills and confidence levels scores indicating Binti wellness effectiveness in fostering emotional resilience and interpersonal interaction",
         "Early trauma intervention",
         "Healthier attachment to caregivers"
       ]
@@ -50,8 +82,8 @@ const ImpactStats: React.FC = () => {
     {
       title: "For Adolescents",
       items: [
-        "Increased self-esteem",
-        "Better coping mechanisms",
+        "69% Self reported better coping mechanisms e.g seeking support from teachers, parents and peers.",
+        "Increased self esteem",
         "Safe spaces for expression",
         "Reduced isolation"
       ]
@@ -68,7 +100,7 @@ const ImpactStats: React.FC = () => {
   return (
     <div className="relative">
       <div className="w-full h-screen relative">
-        <img src="/images/cute.jpg" className="w-full h-full object-cover" />
+        <img src="/images/cute.webp" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
           <motion.h2
             className="text-3xl md:text-5xl font-bold text-white text-center px-4"
@@ -111,7 +143,7 @@ const ImpactStats: React.FC = () => {
       </section>
 
       <div className="w-full h-96 md:h-[500px] relative">
-        <img src="/images/good-impact.jpg" className="w-full h-full object-cover" />
+        <img src="/images/good-impact.webp" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center"></div>
       </div>
 

@@ -17,22 +17,22 @@ const FellowshipsPage: React.FC = () => {
   const alumnae: Alumna[] = [
     {
       name: 'Patience Achieng',
-      image: '/images/graduate-5.jpg',
+      image: '/images/graduate-5.webp',
       bio: 'Patience Achieng is a dedicated youth disability advocate, mental health champion, and social change enthusiast hailing from Kenya. As a person with a physical disability, her advocacy centers on inclusive education, disability rights, and mental health awareness, with a particular focus on the often-overlooked traumas experienced by persons with disabilities and their caregivers. A recent graduate of the Nivishe Fellowship as a certified mental health advocate, she specialized in the mental health challenges faced by learners with disabilities in higher education. Her work encompasses policy engagement, online advocacy, and community training programs. Through collaborations with organizations like UNICEF, GCC, and Nguvu Collective, she amplifies the voices of learners with disabilities, advocating for education, menstrual equity, and mental health. Her initiative on mental health awareness for persons with disabilities has played a key role in bridging gaps in counseling services and dismantling stereotypes surrounding disability and mental well-being. She actively engages in public speaking, digital campaigns, and policy recommendations, striving to cultivate a more inclusive society.',
     },
     {
       name: 'Georgina Ann Njonyo',
-      image: '/images/graduate-4.jpg',
+      image: '/images/graduate-4.webp',
       bio: 'Meet our Alumna, Georgina Ann Jonyo, psychologist and assistant project manager within the USAID Tumikia Mtoto project, working in Kamenu Ward.She is deeply passionate about empowering adolescent girls, young women, and the broader community. Georgina leads impactful initiatives designed to foster sustainable change, focusing on the design and implementation of programs that drive long-term transformation.Her commitment to economic empowerment and sexual and reproductive health (SRH) is evident in her integration of mental health sessions into the projects curriculum. Through targeted training and discussions, she promotes a holistic service approach, providing support to beneficiaries, staff, and the community in both group and individual settings.',
     },
     {
       name: 'Sally Ndwiga',
-      image: '/images/graduate-3.jpg',
+      image: '/images/graduate-3.webp',
       bio: 'Sally Ndwiga is a passionate social impact advocate and the founder and executive director at The Femiscope Initiative, an intersectional, youth and women-led Community-Based Organization (CBO) based in Githurai 44, Nairobi. Since its establishment in 2021, Femiscope Initiative has impacted over 1,500 adolescent girls and young women, addressing critical areas such as Sexual and Reproductive Health and Rights (SRHR), mental health management, Sexual Gender-Based Violence and Economic Empowerment."Sallys innovative approach to mentorship emphasizes intersectionality, ensuring programs are tailored to the unique needs of vulnerable groups, including young mothers, girls with disabilities, and those from low-income households.Under her leadership, Femiscope Initiative has co-created lasting solutions that promote educational equality and empower adolescent girls to thrive.Notably, Sally work has expanded through partnerships with local and international organizations, amplifying awareness and solutions for Gender-Based Violence (GBV) and mental health challenges.Her dedication to empowering vulnerable girls and fostering sustainable development continues to transform lives across Kenya.',
     },
     {
       name: 'Vickie Bonyonga',
-      image: '/images/graduate-1.jpg',
+      image: '/images/graduate-1.webp',
       bio: 'Esther Bonyonga is a womens rights activist, human rights defender, and climate justice advocate from Malawi. She is the Founder and Executive Director of Ladies in Tertiary Education (LAITE), an organization empowering young women in higher education through leadership, mentorship, and advocacy. Esther also serves as the Vice Chair of the Women Human Rights Defenders Coalition Malawi and is the Professional Director for the Next Generation Leadership Academy (NEGLA).With a background in public health and extensive experience in advocacy, she champions gender equality, mental health SRHR, and social justice. Through storytelling, public speaking, and mentorship, she continues to inspire and drive change in her community.',
     }
   ];
@@ -246,7 +246,7 @@ const FellowshipsPage: React.FC = () => {
             {/* Image with Impact Badge */}
             <div className="relative w-full lg:w-1/2">
               <img
-                src="/images/graduation.jpg"
+                src="/images/graduation.webp"
                 alt="Nivishe Fellowship participants"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
@@ -419,7 +419,7 @@ const FellowshipsPage: React.FC = () => {
             <div className="w-full lg:w-1/2">
               <div className="relative lg:sticky lg:top-24">
                 <img
-                  src="/images/graduate-6.jpg"
+                  src="/images/graduate-6.webp"
                   alt="Refugee youth participating in fellowship activities"
                   className="w-full h-auto rounded-lg shadow-lg object-cover"
                   style={{ minHeight: '500px' }}

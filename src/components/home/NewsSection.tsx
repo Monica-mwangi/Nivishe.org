@@ -36,57 +36,72 @@ const NewsSection: React.FC = () => {
             gap: '30px',
           }}>
             {[
+                            {
+                id: 1,
+                title: 'Fellowships, Partnerships & Healing Language in Mental Health Advocacy.',
+                date: 'July 2025',
+                excerpt: "Nivishe launched a stigma-busting Kiswahili Mental Health Lexicon, expanded fellowships for refugees, drove key partnerships in peacebuilding and girls' empowerment, and championed digital-age mental health advocacy propelling culturally rooted care across East Africa.",
+                image: '/images/july.png',
+                link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=df7874177b',
+                linkLabel: 'Read Newsletter'
+              },
+
                {
+                id: 4,
+                title: 'Significant strides made in advancing mental health awareness and support through the Nivishe network.',
+                date: 'June 2025',
+                excerpt: 'Nivishe Foundation celebrates major strides in mental health advocacy, partnerships, and youth empowerment, while unveiling a refreshed, impact-driven website.',
+                image: '/images/june.png',
+                link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=2e51a80165',
+                linkLabel: 'Read Newsletter'
+              },
+              // June 2025 items
+              {
                 id: 2,
                 title: 'Partnership of Nivishe and IREX',
                 date: 'June 2025',
                 excerpt: 'Nivishe Foundation & IREX Partner to Tackle Technology-Facilitated Gender-Based Violence',
-                image: '/images/irex-partner.png', // Fixed image path
+                image: '/images/irex-partner.png',
                 link: '/announcements',
                 linkLabel: 'Read News'
               },
               {
-                id: 2,
+                id: 3,
                 title: 'Nivishe Foundation & Basic Needs Basic Rights Kenya Partnership',
                 date: 'June 2025',
                 excerpt: 'Nivishe Foundation & Basic Needs Basic Rights Kenya Announce Partnership to Bolster Mental Health Support for Displaced Communities',
-                image: '/images/Nairobi.png', // Fixed image path
+                image: '/images/Nairobi.png',
                 link: '/announcements',
                 linkLabel: 'Read News'
               },
-              //  {
-              //   id: 3,
-              //   title: 'Linkages Series.',
-              //   date: 'June 2025',
-              //   excerpt: 'Improving mental health care in the global south. Workshop Series 3, June 20th 12:00 - 12:45 ET',
-              //   image: '/images/linkage-cropped.png', // Fixed image path
-              //   link: 'https://www.neidonors.org/copy-of-linkages-series-1',
-              //   linkLabel: 'Click here to register'
-              // },
-               {
-                id: 1,
+             
+              // May 2025
+              {
+                id: 5,
                 title: 'Fellowship Milestones, Partnerships & Mental Health Advocacy.',
                 date: 'May 2025',
                 excerpt: 'Nivishe Foundation celebrated a successful May 2025 with fellowship milestones, strategic partnerships, a podcast feature, and impactful events while gearing up for a dynamic June ahead.',
-                image: '/images/May.png', // Fixed image path
+                image: '/images/May.png',
                 link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=214599c6ba',
                 linkLabel: 'Read Newsletter'
               },
+              // April 2025
               {
-                id: 1,
+                id: 6,
                 title: 'Nurturing women globally.',
                 date: 'April 2025',
                 excerpt: 'A celebration of the incredible women who nurture our world.',
-                image: '/images/News.jpg', // Fixed image path
+                image: '/images/News.jpg',
                 link: 'https://us19.campaign-archive.com/?u=4415a2c09926577da0dc2a67d&id=f4da8e5704',
                 linkLabel: 'Read Newsletter'
               },
+              // March 2025
               {
-                id: 2,
+                id: 7,
                 title: 'Women’s empowerment and community resilience.',
                 date: 'March 2025',
                 excerpt: 'We are Back, Stronger Than Ever!',
-                image: '/images/Newsletter-2.jpg', // Fixed image path
+                image: '/images/Newsletter-2.jpg',
                 link: 'https://mailchi.mp/628e9743c58d/nivishe-march-newsletter-157',
                 linkLabel: 'Read Newsletter'
               },

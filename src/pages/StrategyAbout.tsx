@@ -33,7 +33,7 @@ const AboutUs = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/About-3.jpg"
+            src="/images/About-3.webp"
             alt="Mental health champions"
             className="w-full h-full object-cover object-center brightness-90 contrast-105 saturate-110 transition-transform duration-500 ease-in-out transform hover:scale-105"
           />

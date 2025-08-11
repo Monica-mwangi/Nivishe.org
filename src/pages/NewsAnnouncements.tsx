@@ -27,7 +27,7 @@ const NewsAnnouncements: React.FC = () => {
           <p>Join us as we work to create safer digital spaces and ensure that mental health support is accessible to those impacted by online harms.</p>
         </div>
       ),
-      image: '/images/irex-partner.png',
+      image: '/images/irex-partner.webp',
       hasExpandableContent: true
     },
     {
